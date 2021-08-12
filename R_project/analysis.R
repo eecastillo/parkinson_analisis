@@ -1,9 +1,9 @@
 library(stringr)
-voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/voice_papers.csv", sep="|")
-names(voice_csv) <- c("Objective", "Diagnosis_type", "Data_source", "Subject_numbers", "ML_method", "Outcomes", "Year", "Reference")
+voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/cvs_data/voice_papers.csv", sep="|")
+#names(voice_csv) <- c("Objective", "Diagnosis_type", "Data_source", "Subject_numbers", "ML_method", "Outcomes", "Year", "Reference")
 #gait_csv <- read.csv("")
 #write_csv <- read.csv("")
-total_splited <- str_split_fixed(voice_csv$Subject_numbers, "; ", 2)
+total_splited <- str_split_fixed(voice_csv$Number.of.subjects..n., "; ", 2)
 subject_total <- total_splited[,1]
 subject_total <- gsub(",","",subject_total)
 voice_csv$subject_total <- as.numeric(subject_total)
@@ -14,6 +14,51 @@ voice_csv$HC_subjects <- HC_subjects
 
 pd_split <- str_split_fixed(hc_split[,2]," PD ",2)
 PD_subjects <- as.numeric(gsub(" PD","",pd_split[,1]))
+PD_subjects[is.na(PD_subjects)] <- 0
 voice_csv$PD_subjects <-PD_subjects
 
-voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
+#delete the + character form 46 and 47
+pd_split[,2] <- substring(pd_split[,2], 3)
+
+msa_split <- str_split_fixed(pd_split[,2]," MSA \\+ ",2)
+MSA_subjects <- as.numeric(gsub(",","",msa_split[,1]))
+MSA_subjects[is.na(MSA_subjects)] <- 0
+voice_csv$MSA_subjects <- MSA_subjects
+
+#separate FND
+fnd_split <- str_split_fixed(msa_split[,2]," FND \\+ ",2)
+FND_subjects <- as.numeric(gsub(",","",fnd_split[,1]))
+FND_subjects[is.na(FND_subjects)] <- 0
+voice_csv$FND_subjects <- FND_subjects
+
+#separate somatization
+somatization_split <- str_split_fixed(fnd_split[,2]," somatization \\+ ",2)
+Somatization_subjects <- as.numeric(gsub(",","",somatization_split[,1]))
+Somatization_subjects[is.na(Somatization_subjects)] <- 0
+voice_csv$Somatization_subjects <- Somatization_subjects
+
+#separate dystonia
+dystonia_split <- str_split_fixed(somatization_split[,2]," dystonia \\+ ",2)
+Dystonia_subjects <- as.numeric(gsub(",","",dystonia_split[,1]))
+Dystonia_subjects[is.na(Dystonia_subjects)] <- 0
+voice_csv$Dystonia_subjects <- Dystonia_subjects
+
+#separate CD
+cd_split <- str_split_fixed(dystonia_split[,2]," CD \\+ ",2)
+CD_subjects <- as.numeric(gsub(",","",cd_split[,1]))
+CD_subjects[is.na(CD_subjects)] <- 0
+voice_csv$CD_subjects <- CD_subjects
+
+#separate ET
+et_split <- str_split_fixed(cd_split[,2]," ET \\+ ",2)
+ET_subjects <- as.numeric(gsub(",","",et_split[,1]))
+ET_subjects[is.na(ET_subjects)] <- 0
+voice_csv$ET_subjects <- ET_subjects
+
+#separate GPD
+gpd_split <- str_split_fixed(et_split[,2]," GPD",2)
+GPD_subjects <- as.numeric(gsub(",","",gpd_split[,1]))
+GPD_subjects[is.na(GPD_subjects)] <- 0
+voice_csv$GPD_subjects <- GPD_subjects
+voice.df <- data.frame(voice_csv)
+#voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
