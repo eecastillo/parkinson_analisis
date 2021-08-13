@@ -1,4 +1,6 @@
 library(stringr)
+library(plotly)
+
 voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/cvs_data/voice_papers.csv", sep="|")
 #names(voice_csv) <- c("Objective", "Diagnosis_type", "Data_source", "Subject_numbers", "ML_method", "Outcomes", "Year", "Reference")
 #gait_csv <- read.csv("")
@@ -60,5 +62,30 @@ gpd_split <- str_split_fixed(et_split[,2]," GPD",2)
 GPD_subjects <- as.numeric(gsub(",","",gpd_split[,1]))
 GPD_subjects[is.na(GPD_subjects)] <- 0
 voice_csv$GPD_subjects <- GPD_subjects
-voice.df <- data.frame(voice_csv)
+
+voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
 #voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
+
+#histogram
+newdata <- voice.df[!is.na(voice.df$Accuracy),] 
+acc <- newdata[order(newdata$Accuracy),]
+plot_ly(
+  newdata,
+  y = newdata$Accuracy,
+  x = newdata$Machine.learning.method.s..,
+  type = "scatter",
+  mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
+  layout(
+    xaxis = list(
+      categoryorder = "array",
+      categoryarray = acc$Machine.learning.method.s.. )
+  )
+)
+  
+newdata[newdata$Machine.learning.method.s..=="EWNN with a train-test ratio of 90:10 and cross validation",]
+
+#plot_ly(data=acc,y = acc$Accuracy, x = acc$Machine.learning.method.s..,type = "scatter", mode = "markers")
+#fig.update_layout(barmode='stack', xaxis={'categoryorder':'total descending'})
+
+#plotly_build(plot_ly(newdata, x = newdata$Accuracy, y = newdata$Machine.learning.method.s.., type = "scatter", mode="markers"))$data[[1]]$x
+
