@@ -110,5 +110,5 @@ plot_outcome("Sensitivity")
 #fig.update_layout(barmode='stack', xaxis={'categoryorder':'total descending'})
 
 #plotly_build(plot_ly(newdata, x = newdata$Accuracy, y = newdata$Machine.learning.method.s.., type = "scatter", mode="markers"))$data[[1]]$x
-voice_csv <- read.table("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv", header = TRUE, sep="|")
+datoos <- read.table("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv", header = TRUE, sep="|")
 
