@@ -66,7 +66,7 @@ voice_csv$GPD_subjects <- GPD_subjects
 voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
 #voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
 
-write.csv(voice.df, file="clean_voice.csv")
+write.table(voice.df, file="clean_voice.csv",sep = "|")
 
 #histogram
 
