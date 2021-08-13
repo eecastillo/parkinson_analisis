@@ -66,7 +66,7 @@ voice_csv$GPD_subjects <- GPD_subjects
 voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
 #voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
 
-write.table(voice.df, file="clean_voice.csv",sep = "|")
+write.table(voice.df, file="clean_voice.csv",sep = "+")
 
 #histogram
 
@@ -110,4 +110,5 @@ plot_outcome("Sensitivity")
 #fig.update_layout(barmode='stack', xaxis={'categoryorder':'total descending'})
 
 #plotly_build(plot_ly(newdata, x = newdata$Accuracy, y = newdata$Machine.learning.method.s.., type = "scatter", mode="markers"))$data[[1]]$x
+voice_csv <- read.table("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv", header = TRUE, sep="|")
 
