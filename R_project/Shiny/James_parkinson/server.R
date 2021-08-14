@@ -28,8 +28,11 @@ shinyServer(function(input, output) {
         )
         # List of choices for selectInput
         outcomes_list <- as.list(choices$num)
+        outcomes_hdwr_list <- as.list(choices_hdwr$num)
+        
         # Name it
         names(outcomes_list) <- choices$var
+        names(outcomes_hdwr_list) <- choices_hdwr$var
         ordered_query <- function(dataframe, colnum, ascending){
             newdata <- dataframe[!is.na(dataframe[[colnum]]),] 
             if(ascending == TRUE)

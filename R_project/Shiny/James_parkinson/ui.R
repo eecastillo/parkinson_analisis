@@ -13,12 +13,14 @@ library(shiny)
 shinyUI(fluidPage(
     
     tabsetPanel(
-        tabPanel("Main Page", br(),
-                 sidebarLayout(
-                     sidebarPanel(
-                     ),
-                     mainPanel()
-                 )),
+        tabPanel("Main Page", br()
+                 #sidebarLayout(
+                    # sidebarPanel(
+                   #  ),
+                  #   mainPanel()
+                 #)
+              #   includeMarkdown("..//Readme.md")
+                 ),
         tabPanel("Voice analysis", br(),
                      # Application title
                      titlePanel("Parkinson voice analysis"),br(),
@@ -53,7 +55,7 @@ shinyUI(fluidPage(
                      
                      sidebarPanel(
                          selectInput("select_hdwr", label = h4("Select Outcome"), 
-                                     choices = outcomes_list, 
+                                     choices = outcomes_hdwr_list, 
                                      selected = 5),
                          
                          #  hr(),
