@@ -14,10 +14,16 @@ shinyUI(fluidPage(
 
     # Application title
     titlePanel("Old Faithful Geyser Data"),
-
+   
     # Sidebar with a slider input for number of bins
     sidebarLayout(
+        
         sidebarPanel(
+            selectInput("select", label = h2("Select Outcome"), 
+                        choices = outcomes_list, 
+                        selected = 1),
+            
+          #  hr(),
             sliderInput("bins",
                         "Number of bins:",
                         min = 1,
@@ -27,7 +33,7 @@ shinyUI(fluidPage(
 
         # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("distPlot")
+            plotlyOutput("distPlot")
         )
     )
 ))

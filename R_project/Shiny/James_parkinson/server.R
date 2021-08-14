@@ -11,20 +11,37 @@ library(shiny)
 library(stringr)
 library(plotly)
 
+#retreive csv
+voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv")
+voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
+
+choices = data.frame(
+    var = colnames(voice.df[8:32]),
+    num = 1:25
+)
+# List of choices for selectInput
+outcomes_list <- as.list(choices$num)
+# Name it
+names(outcomes_list) <- choices$var
+
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-
-    output$distPlot <- renderPlot({
-        #retreive csv
-        voice_csv <- read.table("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv", header = TRUE, sep="|")
-        
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-
+   
+    output$distPlot <- renderPlotly({
+        colnum = as.numeric(input$select) + 7
+        newdata <- voice.df[!is.na(voice.df[[colnum]]),] 
+        acc <- newdata[order(newdata[[colnum]]),]
+        plot_ly(
+            newdata,
+            y = newdata[[colnum]],
+            x = newdata$Machine.learning.method.s..,
+            type = "scatter",
+            mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
+            layout(
+                xaxis = list(
+                    categoryorder = "array",
+                    categoryarray = acc$Machine.learning.method.s.. )
+            )
     })
 
 })
