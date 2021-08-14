@@ -18,7 +18,7 @@ shinyUI(fluidPage(
                  ),
         tabPanel("Voice analysis", br(),
                      # Application title
-                     titlePanel("Parkinson Analysis"),br(),
+                     titlePanel("Parkinson voice analysis"),br(),
                      sidebarLayout(
                          
                          sidebarPanel(
@@ -42,7 +42,33 @@ shinyUI(fluidPage(
                          )
                  
                          )),
-        tabPanel("Handwriting analysis")
+        tabPanel("Handwriting analysis"
+                 , br(),
+                 # Application title
+                 titlePanel("Parkinson handwriting analysis"),br(),
+                 sidebarLayout(
+                     
+                     sidebarPanel(
+                         selectInput("select_hdwr", label = h4("Select Outcome"), 
+                                     choices = outcomes_list, 
+                                     selected = 5),
+                         
+                         #  hr(),
+                         sliderInput("bins_hdwr",
+                                     "Number of top studies:",
+                                     min = 5,
+                                     max = 20,
+                                     value = 10)
+                     ),
+                     # Show Main panel
+                     mainPanel(
+                         plotlyOutput("distPlot_hdwr"),
+                         # Output: Header + table of distribution ----
+                         h4("Top studies"),
+                         tableOutput("view_hdwr")
+                     )
+                     
+                 ))
     )
     
    
