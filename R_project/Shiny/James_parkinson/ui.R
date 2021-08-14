@@ -13,7 +13,12 @@ library(shiny)
 shinyUI(fluidPage(
     
     tabsetPanel(
-        tabPanel("Main Page"),
+        tabPanel("Main Page", br(),
+                 sidebarLayout(
+                     sidebarPanel(
+                     ),
+                     mainPanel()
+                 )),
         tabPanel("Voice analysis", br(),
                      # Application title
                      titlePanel("Parkinson voice analysis"),br(),
@@ -60,7 +65,7 @@ shinyUI(fluidPage(
                      ),
                      # Show Main panel
                      mainPanel(
-                         plotlyOutput("distPlot_hdwr"),
+                         plotlyOutput("Plotly_hdwr"),
                          # Output: Header + table of distribution ----
                          h4("Top studies"),
                          tableOutput("view_hdwr")

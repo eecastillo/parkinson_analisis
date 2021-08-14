@@ -124,3 +124,15 @@ hand$subject_total <- as.numeric(subject_total)
 hc_split <- str_split_fixed(total_splited[,2]," HC \\+ ",2)
 HC_subjects <- as.numeric(gsub(",","",hc_split[,1]))
 hand$HC_subjects <- HC_subjects
+
+pd_split <- str_split_fixed(hc_split[,2]," PD ",2)
+PD_subjects <- as.numeric(gsub(" PD","",pd_split[,1]))
+PD_subjects[is.na(PD_subjects)] <- 0
+hand$PD_subjects <-PD_subjects
+
+pd_split[,2] <- substring(pd_split[,2], 3)
+
+msa_split <- str_split_fixed(pd_split[,2]," MSA \\+ ",2)
+MSA_subjects <- as.numeric(gsub(",","",msa_split[,1]))
+MSA_subjects[is.na(MSA_subjects)] <- 0
+voice_csv$MSA_subjects <- MSA_subjects
