@@ -112,3 +112,15 @@ plot_outcome("Sensitivity")
 #plotly_build(plot_ly(newdata, x = newdata$Accuracy, y = newdata$Machine.learning.method.s.., type = "scatter", mode="markers"))$data[[1]]$x
 dataaa <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv")
 dataaa[[2]]
+
+hand <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/cvs_data/handwriting_paper.csv",sep = "|")
+hand <- hand[1:nrow(hand)-1,]
+total_splited <- str_split_fixed(hand$Number.of.subjects..n., "; ", 2)
+subject_total <- total_splited[,1]
+subject_total <- gsub(",","",subject_total)
+hand$subject_total <- as.numeric(subject_total)
+
+
+hc_split <- str_split_fixed(total_splited[,2]," HC \\+ ",2)
+HC_subjects <- as.numeric(gsub(",","",hc_split[,1]))
+hand$HC_subjects <- HC_subjects
