@@ -47,7 +47,7 @@ Dentro del estudio y analisis de los datos recopilados en las bases de datos par
   - Jitter
   - Shimmer
 	
-<img align="center" src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 530 width = 850>
+<img align="center" src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 250 width = 400>
 	
 Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran los parametros de: 
   - Genero
