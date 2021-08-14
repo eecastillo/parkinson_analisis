@@ -26,6 +26,8 @@ Análisis de datasets de la Enfermedad de Parkinson.
   Los síntomas comienzan gradualmente. A veces, comienza con un temblor apenas perceptible en una sola mano.  
   Los temblores son habituales, aunque la enfermedad también suele causar rigidez o disminución del movimiento.
 
+#### Proyecto	
+	
 	
 Este proyecto se basa en el documento titulado 'Machine Learning for the diagnosis of Parkinson's disease: A systematic review' publicado por Jie Mei, Christian Desrosiers y Johannes Frasnelli de la Université de Montréal dentro del cual se analizan mas de 200 estudios enfocados al diagnostico de la enfermedad de Parkinson mediante el uso de distintos modelos de Aprendizaje Maquina para diversos tipos de información del usuario como lo son la voz y el dibujo de patrones
 
