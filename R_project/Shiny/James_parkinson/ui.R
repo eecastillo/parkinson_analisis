@@ -36,7 +36,8 @@ shinyUI(fluidPage(
                                          "Number of top studies:",
                                          min = 5,
                                          max = 20,
-                                         value = 10)
+                                         value = 10),br(),
+                             plotlyOutput("MLPiePlot")
                          ),
                          # Show Main panel
                          mainPanel(
@@ -63,7 +64,8 @@ shinyUI(fluidPage(
                                      "Number of top studies:",
                                      min = 5,
                                      max = 20,
-                                     value = 10)
+                                     value = 10),br(),
+                         plotlyOutput("MLPiePlot_hdwr")
                      ),
                      # Show Main panel
                      mainPanel(

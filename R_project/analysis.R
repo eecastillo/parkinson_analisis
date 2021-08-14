@@ -136,3 +136,30 @@ msa_split <- str_split_fixed(pd_split[,2]," MSA \\+ ",2)
 MSA_subjects <- as.numeric(gsub(",","",msa_split[,1]))
 MSA_subjects[is.na(MSA_subjects)] <- 0
 voice_csv$MSA_subjects <- MSA_subjects
+ML_methods <- c("cross validation", "LS-SVM", "PNN", "SVM-RBF","SVM-linear","SCFW-KELM","SVM","FKNN",
+                "ECFA-SVM","DNN","SMO","Pegasos","AdaBoost","FBANN","rotation forest","NNge",
+                "logistic regression","KNN","naïve Bayes","decision tree","random forest","CNN",
+                "LSSVM-RBF","MLP","joint learning");
+#count <- grepl("DNN", voice.df$Machine.learning.method.s.., fixed = TRUE)
+#sum(count, na.rm = TRUE)
+
+tables <- c("Fuzzy neural system with 10-fold cross validation	","LDA-NN-GA with leave-one-subject-out cross validation	",
+            "fuzzy classifier with 10-fold cross validation, leave-oneout cross validation or a train-test ratio of 70:30	",
+            "LS-SVM/PNN	","SVM-RBF, SVM-linear with 10-fold cross validation	","SCFW-KELM with 10- fold cross validation	",
+            "10-fold cross validation	","SVM	","SVM	","FKNN	","ECFA-SVM with 10- fold cross validation	","DNN	","SMO/Pegasos/AdaBoost	",
+            "FBANN	","fold cross validation Iteration 100	","rotation forest ensemble	","NNge with AdaBoost with 10-fold cross validation	",
+            "logistic regression, KNN, naïve Bayes, SVM, decision tree, random forest, DNN with 10-fold cross validation (deep NN)	",
+            "SVM	","SVM-RBF with 10-fold cross validation	")
+
+pie_table <- data.frame(ML_methods,vector(mode="numeric", length=length(ML_methods)))
+colnames(pie_table) <- c("ML_method","Percentage")
+for(i in 1:length(ML_methods)){
+  count <- grepl(pie_table[i,1], tables, fixed = TRUE)
+  pie_table[i,2]<- sum(count, na.rm = TRUE)#/length(voice.df$Machine.learning.method.s..)
+}
+pie_table <- pie_table[which(pie_table$Percentage!=0),]
+pie_table$Percentage <- pie_table$Percentage/sum(pie_table$Percentage)
+
+
+plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
+        layout(title = 'Top outcomes')

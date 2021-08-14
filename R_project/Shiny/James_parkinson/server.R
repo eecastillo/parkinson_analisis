@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
         #retreive csv
         voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv")
         voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
-        hand_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/cvs_data/handwriting_paper.csv",sep = "|")
+        hand_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_handwriting.csv",sep = "|")
         hand.df <- data.frame(hand_csv, stringsAsFactors = FALSE)
         choices = data.frame(
             var = colnames(voice.df[8:31]),
@@ -58,7 +58,22 @@ shinyServer(function(input, output) {
             colnames(top.df) <- c("ML method(s)",as.character(colnames(dataframe[colnum])))
             return(top.df)
         }
-
+        ML_methods <- c("cross validation", "LS-SVM", "PNN", "SVM-RBF","SVM-linear","SCFW-KELM","SVM","FKNN",
+                        "ECFA-SVM","DNN","SMO","Pegasos","AdaBoost","FBANN","rotation forest","NNge",
+                        "logistic regression","KNN","naïve Bayes","decision tree","random forest","CNN",
+                        "LSSVM-RBF","MLP","joint learning","ELM","NN","EER");
+        form_pie_table <- function(dataframe)
+        {
+            pie_table <- data.frame(ML_methods,vector(mode="numeric", length=length(ML_methods)))
+            colnames(pie_table) <- c("ML_method","Percentage")
+            for(i in 1:length(ML_methods)){
+                count <- grepl(pie_table[i,1], dataframe, fixed = TRUE)
+                pie_table[i,2]<- sum(count, na.rm = TRUE)
+            }
+            pie_table <- pie_table[which(pie_table$Percentage!=0),]
+            pie_table$Percentage <- pie_table$Percentage/sum(pie_table$Percentage)
+            return(pie_table)
+        }
     output$distPlot <- renderPlotly({
         colnum = as.numeric(input$select) + 7
         #newdata <- voice.df[!is.na(voice.df[[colnum]]),] 
@@ -75,7 +90,13 @@ shinyServer(function(input, output) {
                     categoryarray = acc$Machine.learning.method.s.. )
             )
     })
-    
+    output$MLPiePlot <- renderPlotly({
+        pre_pie_table <- top_ordered_query(voice.df,as.numeric(input$bins),as.numeric(input$select) + 7)
+        colnames(pre_pie_table) <- c("concept","value")
+        pie_table <- form_pie_table(pre_pie_table$concept)
+        plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
+            layout(title = 'Top outcomes')
+    })
     output$view <- renderTable({
         top_ordered_query(voice.df,as.numeric(input$bins),as.numeric(input$select) + 7)
     })
@@ -96,6 +117,16 @@ shinyServer(function(input, output) {
                     categoryorder = "array",
                     categoryarray = acc$Machine.learning.method.s. )
             )
+    })
+    output$view_hdwr <- renderTable({
+        top_ordered_query(hand.df,as.numeric(input$bins_hdwr),as.numeric(input$select_hdwr) + 7)
+    })
+    output$MLPiePlot_hdwr <- renderPlotly({
+        pre_pie_table <- top_ordered_query(hand.df,as.numeric(input$bins_hdwr),as.numeric(input$select) + 7)
+        colnames(pre_pie_table) <- c("concept","value")
+        pie_table <- form_pie_table(pre_pie_table$concept)
+        plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
+            layout(title = 'Top outcomes')
     })
     
 })
