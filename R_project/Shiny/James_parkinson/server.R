@@ -84,10 +84,10 @@ shinyServer(function(input, output, session) {
             x = acc$Machine.learning.method.s..,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
-            layout(
+            layout(title = 'Estudios ordenados por outcome seleccionado',
                 xaxis = list(
                     categoryorder = "array",
-                    categoryarray = acc$Machine.learning.method.s.. )
+                    categoryarray = acc$Machine.learning.method.s..)
             )
     })
     output$MLPiePlot <- renderPlotly({
@@ -112,7 +112,7 @@ shinyServer(function(input, output, session) {
             x = acc$Machine.learning.method.s.,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
-            layout(
+            layout(title = 'Estudios ordenados por outcome seleccionado',
                 xaxis = list(
                     categoryorder = "array",
                     categoryarray = acc$Machine.learning.method.s. )
@@ -126,10 +126,7 @@ shinyServer(function(input, output, session) {
         colnames(pre_pie_table) <- c("concept","value")
         pie_table <- form_pie_table(pre_pie_table$concept)
         plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
-            layout(title = 'Top outcomes',
-                   plot_bgcolor  = "rgba(0, 0, 0, 0)",
-                   paper_bgcolor = "rgba(0, 0, 0, 0)",
-                   fig_bgcolor   = "rgba(0, 0, 0, 0)")
+            layout(title = 'Top outcomes')
     })
     observe(session$setCurrentTheme(
         if (isTRUE(input$dark_mode)) dark else light
