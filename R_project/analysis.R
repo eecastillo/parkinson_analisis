@@ -1,6 +1,6 @@
 library(stringr)
 library(plotly)
-
+setwd("/home/drake/dev/data_analysis/project/R_project/Shiny/files")
 voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/cvs_data/voice_papers.csv", sep="|")
 #names(voice_csv) <- c("Objective", "Diagnosis_type", "Data_source", "Subject_numbers", "ML_method", "Outcomes", "Year", "Reference")
 #gait_csv <- read.csv("")
@@ -66,12 +66,15 @@ voice_csv$GPD_subjects <- GPD_subjects
 voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
 #voice.df <- voice_csv[,!(names(voice_csv) %in% c("Subject_numbers"))]
 
+write.csv(voice.df, file="clean_voice.csv")
+
 #histogram
-newdata <- voice.df[!is.na(voice.df$Accuracy),] 
-acc <- newdata[order(newdata$Accuracy),]
+
+newdata <- voice.df[!is.na(voice.df$AUC),] 
+acc <- newdata[order(newdata$AUC),]
 plot_ly(
   newdata,
-  y = newdata$Accuracy,
+  y = newdata$AUC,
   x = newdata$Machine.learning.method.s..,
   type = "scatter",
   mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
@@ -80,12 +83,32 @@ plot_ly(
       categoryorder = "array",
       categoryarray = acc$Machine.learning.method.s.. )
   )
-)
-  
-newdata[newdata$Machine.learning.method.s..=="EWNN with a train-test ratio of 90:10 and cross validation",]
+
+#plot outcome function implementation for shiny
+plot_outcome <- function(outcome_type)
+{
+  non_nan_data <- voice.df[!is.na(voice.df[[outcome_type]]),]
+  ordered_data <- non_nan_data[order(non_nan_data[[outcome_type]]),]
+  plot_ly(
+    ordered_data,
+    y = ordered_data[[outcome_type]],
+    x = ordered_data$Machine.learning.method.s..,
+    type = "scatter",
+    mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
+    layout(
+      xaxis = list(
+        categoryorder = "array",
+        categoryarray = acc$Machine.learning.method.s.. )
+    )
+}
+
+plot_outcome("Sensitivity")
+####################################
+#newdata[newdata$Machine.learning.method.s..=="EWNN with a train-test ratio of 90:10 and cross validation",]
 
 #plot_ly(data=acc,y = acc$Accuracy, x = acc$Machine.learning.method.s..,type = "scatter", mode = "markers")
 #fig.update_layout(barmode='stack', xaxis={'categoryorder':'total descending'})
 
 #plotly_build(plot_ly(newdata, x = newdata$Accuracy, y = newdata$Machine.learning.method.s.., type = "scatter", mode="markers"))$data[[1]]$x
-
+dataaa <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv")
+dataaa[[2]]
