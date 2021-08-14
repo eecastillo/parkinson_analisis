@@ -9,31 +9,40 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+# Define UI for tab that ana
 shinyUI(fluidPage(
-
+    
+    tabsetPanel(
+        tabPanel("Main Page"),
+        tabPanel("Voice analysis"),
+        tabPanel("Handwriting analysis")
+    ),
+    
     # Application title
-    titlePanel("Old Faithful Geyser Data"),
-   
+    titlePanel("Parkinson Analysis"),
+    
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         
         sidebarPanel(
-            selectInput("select", label = h2("Select Outcome"), 
+            selectInput("select", label = h4("Select Outcome"), 
                         choices = outcomes_list, 
                         selected = 1),
             
           #  hr(),
             sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+                        "Number of top studies:",
+                        min = 5,
+                        max = 20,
+                        value = 10)
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
-            plotlyOutput("distPlot")
+            plotlyOutput("distPlot"),
+            # Output: Header + table of distribution ----
+            h4("Top studies"),
+            tableOutput("view")
         )
     )
 ))
