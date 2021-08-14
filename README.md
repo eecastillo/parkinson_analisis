@@ -31,8 +31,7 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 
 	
 	
-#
-	
+#	
 > 🛑 Se recomienda tener conocimientos básico-intermedio de:  
 	■ Parkinson.  
 	■ R y R Shiny.
@@ -62,20 +61,9 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 - [Diapositivas](https://labs.phaser.io/index.html "---")
 - [Machine learning for the diagnosis of Parkinson’s
 disease](https://arxiv.org/ftp/arxiv/papers/2010/2010.06101.pdf "E-Book PDF")
+- [Videos todo sobre el Parkinson](http://ustedyparkinson.com/es-pk/view/m101-a01-entendiendo-la-enfermedad-de-parkinson-animaci%c3%b3n "UstedyParkinson")
 
 ---
 con ❤ **[eecastillo](https://github.com/eecastillo)** & **[@ferjml97](https://github.com/ferjml97)** 🙂
-
-
-  
-  
-<!----
-<details>
-<summary></summary>
-  <p><h3>Enlaces</h3></p>
-<br>
-Thank's ❤ for this dropdown.
-</details>
---->
 
 
