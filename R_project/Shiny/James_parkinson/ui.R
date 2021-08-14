@@ -14,35 +14,37 @@ shinyUI(fluidPage(
     
     tabsetPanel(
         tabPanel("Main Page"),
-        tabPanel("Voice analysis"),
+        tabPanel("Voice analysis", br(),
+                     # Application title
+                     titlePanel("Parkinson Analysis"),br(),
+                     sidebarLayout(
+                         
+                         sidebarPanel(
+                             selectInput("select", label = h4("Select Outcome"), 
+                                         choices = outcomes_list, 
+                                         selected = 5),
+                             
+                             #  hr(),
+                             sliderInput("bins",
+                                         "Number of top studies:",
+                                         min = 5,
+                                         max = 20,
+                                         value = 10)
+                         ),
+                         # Show Main panel
+                         mainPanel(
+                             plotlyOutput("distPlot"),
+                             # Output: Header + table of distribution ----
+                             h4("Top studies"),
+                             tableOutput("view")
+                         )
+                 
+                         )),
         tabPanel("Handwriting analysis")
-    ),
-    
-    # Application title
-    titlePanel("Parkinson Analysis"),
-    
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        
-        sidebarPanel(
-            selectInput("select", label = h4("Select Outcome"), 
-                        choices = outcomes_list, 
-                        selected = 1),
-            
-          #  hr(),
-            sliderInput("bins",
-                        "Number of top studies:",
-                        min = 5,
-                        max = 20,
-                        value = 10)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotlyOutput("distPlot"),
-            # Output: Header + table of distribution ----
-            h4("Top studies"),
-            tableOutput("view")
-        )
     )
+    
+   
+    
+    # Sidebar for voice analysis
+
 ))
