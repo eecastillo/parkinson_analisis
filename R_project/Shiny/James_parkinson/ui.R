@@ -13,7 +13,9 @@ library(shiny)
 shinyUI(fluidPage(
     
     tabsetPanel(
-        tabPanel("Main Page"),
+        tabPanel("Main Page"#,
+                # includeMarkdown("\Readme.md")
+                 ),
         tabPanel("Voice analysis", br(),
                      # Application title
                      titlePanel("Parkinson Analysis"),br(),
