@@ -8,18 +8,21 @@
 #
 
 library(shiny)
+library(bslib)
+library(shinyWidgets)
+light <- bs_theme()
+dark <- bs_theme(bg = "black", fg = "white", primary = "pink")
 
+#library(markdown)
 # Define UI for tab that ana
 shinyUI(fluidPage(
-    
+    theme = light, br(),
+   # checkboxInput("dark_mode", "Dark mode"),
+    materialSwitch(inputId = "dark_mode", label = "Night mode"),
     tabsetPanel(
-        tabPanel("Main Page", br()
-                 #sidebarLayout(
-                    # sidebarPanel(
-                   #  ),
-                  #   mainPanel()
-                 #)
-              #   includeMarkdown("..//Readme.md")
+        tabPanel("Main Page", br(),h4("Top studies")
+                 
+              #   includeMarkdown("../../../Readme.md")
                  ),
         tabPanel("Voice analysis", br(),
                      # Application title

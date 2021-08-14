@@ -9,7 +9,7 @@
 
 
 # Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
         library(shiny)
         library(stringr)
         library(plotly)
@@ -126,7 +126,12 @@ shinyServer(function(input, output) {
         colnames(pre_pie_table) <- c("concept","value")
         pie_table <- form_pie_table(pre_pie_table$concept)
         plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
-            layout(title = 'Top outcomes')
+            layout(title = 'Top outcomes',
+                   plot_bgcolor  = "rgba(0, 0, 0, 0)",
+                   paper_bgcolor = "rgba(0, 0, 0, 0)",
+                   fig_bgcolor   = "rgba(0, 0, 0, 0)")
     })
-    
+    observe(session$setCurrentTheme(
+        if (isTRUE(input$dark_mode)) dark else light
+    ))  
 })
