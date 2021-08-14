@@ -61,3 +61,4 @@ Classification of PD, HC and SWEDD|Diagnosis and differential diagnosis|PPMI dat
 Classification of PD, HC and SWEDD|Diagnosis and differential diagnosis|PPMI database|741; 262 HC + 408 PD + 71 SWEDD|LSSVM-RBF with 10- fold cross validation|SWEDD vs HC accuracy = 93.03%|||2018|Singh et al||||||0.9303|||||||||||||||||||||LSSVM-RBF with 10- fold cross validation|||
 Classification of PD from HC|Diagnosis|PPMI database|408; 204 HC + 204 PD|CNN (VGG and ResNet)|ResNet50 accuracy = 88.6%|||2019|Yagis et al||||||0.886|||||||||||||||||||||CNN (VGG and ResNet)|||
 Classification of PD from HC|Diagnosis|PPMI database|754; 158 HC + 596 PD|FCN, GCN with 5-fold cross validation| AUC = 95.37%|||2018|Zhang et al|||||||||||0.9537||||||||||||||||FCN/GCN with 5-fold cross validation|||
+.|||||||||||||||||||||||||||||||||||||||
