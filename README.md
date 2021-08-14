@@ -27,19 +27,21 @@ Análisis de datasets de la Enfermedad de Parkinson.
   Los temblores son habituales, aunque la enfermedad también suele causar rigidez o disminución del movimiento.
   
 
-  
-<!----
-> 🛑 Se recomienda tener conocimientos básicos de 
-> ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=ffffff)
-> ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
---->
-  
 ### Enlaces de Interés
 - [Parkinson](https://www.mayoclinic.org/es-es/diseases-conditions/parkinsons-disease/symptoms-causes/syc-20376055 " Enfermedad de Parkinson")
 - [Diapositivas](https://labs.phaser.io/index.html "---")
 - [Machine learning for the diagnosis of Parkinson’s
 disease](https://arxiv.org/ftp/arxiv/papers/2010/2010.06101.pdf "E-Book PDF")
 
+---
+con ❤ **[eecastillo](https://github.com/eecastillo)** & **[@ferjml97](https://github.com/ferjml97)** 🙂
+
+  <!----
+> 🛑 Se recomienda tener conocimientos básicos de 
+> ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=ffffff)
+> ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
+--->
+  
   
 <!----
 <details>
@@ -50,5 +52,4 @@ Thank's ❤ for this dropdown.
 </details>
 --->
 
----
-con ❤ **[eecastillo](https://github.com/eecastillo)** & **[@ferjml97](https://github.com/ferjml97)** 🙂
+
