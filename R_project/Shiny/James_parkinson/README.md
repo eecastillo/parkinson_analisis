@@ -37,6 +37,23 @@ Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utili
 	- Presicion
 	- Sensibilidad
 	- AUC
+	
+Dentro del estudio y analisis de los datos recopilados en las bases de datos para la deteccion de parkinson por medio del uso de la voz se encuentran los parametros de:
+        - Edad
+	- Sexo
+	- Tiempo de prueba
+	- Motor_UPDRS
+	- Total_UPDRS
+	- Jitter
+	- Shimmer
+	
+Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran los parametros de: 
+	- Genero
+	- si es diestro o zurdo
+	- Edad
+	- Maxima desviacion
+        - Desviacion minima
+	- Desviacion estandar
   
 <!----
 > 🛑 Se recomienda tener conocimientos básicos de 
