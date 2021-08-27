@@ -38,10 +38,30 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 	■ Parkinson.  
 	■ R y R Shiny.
 
+### Desarrollo 🥼
+▶ **`Breve descripción de lo hecho con la limpieza de los datos`**
+  <ul>
+  <details open>
+  <summary> 📑 </summary>
+    1._ Se descargó el documento.PDF **"Machine learning for the diagnosis of Parkinson’s disease: A systematic review"** </br>  
+    2._ Se convirtió el documento a formato DOCX </br>
+	2.1._ Se seleccionó los datos a utilizar.
+	2.2._ Se formateó los datos de las tablas de interés a utilizar.
+		Table 4: Studies that applied machine learning models to voice recordings to diagnose PD (n = 55).
+		Table 5: Studies that applied machine learning models to movement or gait data to diagnose PD (n = 51).
+		Table 6: Studies that applied machine learning models to MRI data to diagnose PD (n = 36)
+    3._ Se extrajo los datos por filas de todas las tablas de interés del documento.DOCX </br>
+    4._ Se transcribió los datos en documentos.xlsx
+	5._ Se uso pipe o pleca (|) para la separación de los datos en columnas.
+	6._ Se modificarón modificarón algunas columnas dependiendo de la finalización que se requería con los datos. Más info aquí.
+   ...🐱‍👤
+  </details>
+  </ul>
+  
 ### Q&A 💬
 ▶ **`Preguntas y respuestas`**
   <ul>
-  <details open>
+  <details>
   <summary> ❓ / ❗ </summary>
     1._ Qué es la Dopamina? </br>  
       R= Es uno de los muchos neurotransmisores que usan las neuronas para comunicarse entre ellas y es una sustancia que no solo la produce el ser humano, </br>
