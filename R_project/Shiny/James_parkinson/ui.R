@@ -20,14 +20,14 @@ shinyUI(fluidPage(
    # checkboxInput("dark_mode", "Dark mode"),
     materialSwitch(inputId = "dark_mode", label = "Night mode"),
     tabsetPanel(
-        tabPanel("Main Page",# br(),h4("Top studies"),
-                 tabPanel("Equipo",
-                          includeMarkdown("../../../Readme.md")
-                 ),
+       # tabPanel("Main Page",# br(),h4("Top studies"),
+        #         tabPanel("Equipo",
+         #                 includeMarkdown("../../../Readme.md")
+          #       ),
            #    sidebarPanel(
             #    includeMarkdown("../../../Readme.md")
              #   )
-               ),
+           #    ),
         tabPanel("Voice analysis", br(),
                      # Application title
                      titlePanel("Parkinson voice analysis"),br(),
@@ -83,6 +83,9 @@ shinyUI(fluidPage(
                      )
                      
                  )),
+        tabPanel("Information",
+                 includeMarkdown("../../../Readme.md")
+        ),
         tabPanel("Information",
                  includeMarkdown("../../../Readme.md")
         )
