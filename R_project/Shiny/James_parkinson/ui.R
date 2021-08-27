@@ -21,9 +21,12 @@ shinyUI(fluidPage(
     materialSwitch(inputId = "dark_mode", label = "Night mode"),
     tabsetPanel(
         tabPanel("Main Page",# br(),h4("Top studies"),
-               #  sidebarPanel(
-                #includeMarkdown("../../../Readme.md")
-                # )
+                 tabPanel("Equipo",
+                          includeMarkdown("../../../Readme.md")
+                 ),
+           #    sidebarPanel(
+            #    includeMarkdown("../../../Readme.md")
+             #   )
                ),
         tabPanel("Voice analysis", br(),
                      # Application title
@@ -79,11 +82,11 @@ shinyUI(fluidPage(
                          tableOutput("view_hdwr")
                      )
                      
-                 ))
-    ),
-   tabPanel("Information",
-            includeMarkdown("../../../Readme.md")
-   )
+                 )),
+        tabPanel("Information",
+                 includeMarkdown("../../../Readme.md")
+        )
+    )
     
    
     
