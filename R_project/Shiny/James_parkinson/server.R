@@ -84,7 +84,7 @@ shinyServer(function(input, output, session) {
             x = acc$Machine.learning.method.s..,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
-            layout(title = 'Estudios ordenados por outcome seleccionado',
+            layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
                     categoryarray = acc$Machine.learning.method.s..)
@@ -112,7 +112,7 @@ shinyServer(function(input, output, session) {
             x = acc$Machine.learning.method.s.,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
-            layout(title = 'Estudios ordenados por outcome seleccionado',
+            layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
                     categoryarray = acc$Machine.learning.method.s. )

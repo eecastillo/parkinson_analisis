@@ -25,8 +25,37 @@ Análisis de datasets de la Enfermedad de Parkinson.
   La enfermedad de Parkinson es una enfermedad progresiva del sistema nervioso que afecta el movimiento.  
   Los síntomas comienzan gradualmente. A veces, comienza con un temblor apenas perceptible en una sola mano.  
   Los temblores son habituales, aunque la enfermedad también suele causar rigidez o disminución del movimiento.
-  
 
+#### Proyecto	
+	
+	
+Este proyecto se basa en el documento titulado 'Machine Learning for the diagnosis of Parkinson's disease: A systematic review' publicado por Jie Mei, Christian Desrosiers y Johannes Frasnelli de la Université de Montréal dentro del cual se analizan mas de 200 estudios enfocados al diagnostico de la enfermedad de Parkinson mediante el uso de distintos modelos de Aprendizaje Maquina para diversos tipos de información del usuario como lo son la voz y el dibujo de patrones
+
+	
+Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utilizado dentro de cada documento se utilizan distintas metricas de desempeño como lo son:
+  - Exactitud
+  - Presicion
+  - Sensibilidad
+  - AUC
+	
+Dentro del estudio y analisis de los datos recopilados en las bases de datos para la deteccion de parkinson por medio del uso de la voz se encuentran los parametros de:
+  - Edad
+  - Sexo
+  - Tiempo de prueba
+  - Motor_UPDRS
+  - Total_UPDRS
+  - Jitter
+  - Shimmer
+	
+<img align="center" src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 250 width = 400>
+	
+Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran los parametros de: 
+  - Genero
+  - si es diestro o zurdo
+  - Edad
+  - Maxima desviacion
+  - Desviacion minima
+  - Desviacion estandar
   
 <!----
 > 🛑 Se recomienda tener conocimientos básicos de 
