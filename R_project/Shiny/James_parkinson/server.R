@@ -47,11 +47,14 @@ shinyServer(function(input, output, session) {
         }
         top_ordered_query <- function(dataframe,rownum,colnum)
         {
-            ordered.df <- ordered_query(dataframe,colnum,FALSE)    
+            ordered.df <- ordered_query(dataframe,colnum,FALSE)   
+            
             ML <- ordered.df$ML
+            print(ordered.df)
             # ML
-            ML[ML==""] <- ordered.df$Machine.learning.method.s..[ML==""]
+           # ML[ML==""] <- ordered.df$Machine.learning.method.s..
             top.df <- data.frame(ML, ordered.df[[colnum]])
+            print("data")
             if(nrow(top.df)>rownum){
                 top.df <- top.df[1:rownum,]
             }
