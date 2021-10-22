@@ -61,7 +61,7 @@ shinyServer(function(input, output, session) {
             colnames(top.df) <- c("ML method(s)",as.character(colnames(dataframe[colnum])))
             return(top.df)
         }
-        ML_methods <- c("cross validation", "LS-SVM", "PNN", "SVM-RBF","SVM-linear","SCFW-KELM","SVM","FKNN",
+        ML_methods <- c("LS-SVM", "PNN", "SVM-RBF","SVM-linear","SCFW-KELM","SVM","FKNN",
                         "ECFA-SVM","DNN","SMO","Pegasos","AdaBoost","FBANN","rotation forest","NNge",
                         "logistic regression","KNN","naïve Bayes","decision tree","random forest","CNN",
                         "LSSVM-RBF","MLP","joint learning","ELM","NN","EER");
