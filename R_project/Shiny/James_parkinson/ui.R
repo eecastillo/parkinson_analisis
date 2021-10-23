@@ -368,6 +368,7 @@ shinyUI(
                                        img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/parselmouth.jpeg?raw=true"
                                            # height = 350, width = 600
                                        )
+                                       
                                 ),
                                 
                                 column(12, style="text-align:center",br(),br(),
@@ -384,6 +385,17 @@ shinyUI(
                                     )
                                 ),
                             )
+                        ),
+                        tabPanel("Mockup",
+                                 fluidRow(
+                                     column(12, style="text-align:center",br(),br(),
+                                            h3("James Parkinson App"),br(),
+                                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/mockup.jpeg?raw=true"
+                                                # height = 350, width = 600
+                                            )
+                                            
+                                     )
+                                     )
                         )
                     )
                     
