@@ -29,47 +29,93 @@ shinyUI(
                      titlePanel("Parkinson Análisis"),br(),
                      img( style="center", src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/cortex.png?raw=true",
                           height = 300, width = 1200),br(),
-                     h3("Qué es la enfermedad de parkinson ?"),br(),
-                     h5("Es un trastorno neurodegenerativo que afecta al sistema nervioso de manera crónica y progresiva."),
-                     h5("Se caracteriza por la degeneración de neuronas en la sustancia negra,
-                        provocando una falta de dopamina en el organismo y hace"),
-                     h5("que el control del movimiento se vea alterado,
-                        dando lugar a los síntomas motores típicos, como el temblor en reposo o la rigidez."),br(),
+                     fluidRow(
+                         column(8,
+                                h3(align="center","Qué es la enfermedad de parkinson ?")
+                         )
+                     ),
+                     br(),
+                     fluidRow(
+                         column(8,
+                                h5(align="justify","Es un trastorno neurodegenerativo que afecta al sistema nervioso de manera crónica y progresiva.
+                                   Se caracteriza por la degeneración de neuronas en la sustancia negra,
+                        provocando una falta de dopamina en el organismo y haceque el control del movimiento se vea alterado,
+                        dando lugar a los síntomas motores típicos, como el temblor en reposo o la rigidez.")
+                         )
+                     ),
+                     br(),
+                     fluidRow(
+                         column(8,
+                                h2(align="center","Desarrollo previo")
+                         )
+                     ),
+                     fluidRow(
+                         column(3,
+                                h5(align="justify","Este proyecto, se basa en el documento titulado 
+                        'Machine Learning for the diagnosis of Parkinson's disease: A systematic review', publicado por 
+                        Jie Mei, Christian Desrosiers y Johannes Frasnelli de la Université de Montréal.
+                        Dentro del cual se analizan mas de 200 estudios enfocados al diagnostico de la Enfermedad de Parkinson (EP),
+                        mediante el uso de distintos modelos de Aprendizaje Maquina para diversos tipos
+                        de información del usuario como lo son la voz y el dibujo de patrones.")
+                         ),
+                         column(8,
+                                img( style="align:justify", src = "https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/paper.png",
+                                     height = 500, width = 750 )
+                         )
+                     ),
+                     fluidRow(
+                         column(8,
+                                     h2(align="center","Metricas de desempeño")
+                                     )
+                              ),
+                     fluidRow(
+                         column(3,
+                         h5("Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utilizado
+                        dentro de cada documento se utilizan distintas metricas de desempeño como lo son:
+                        Exactitud, Presicion, Sensibilidad, entre otras."),
+                         ),
+                         column(8,
+                                img(style="align:left",src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/outcomes.png?raw=true",
+                                    height = 450, width = 750) 
+                         )
+                     ),
                      
-                     h5("Este proyecto, se basa en el documento titulado 
-                        'Machine Learning for the diagnosis of Parkinson's disease: A systematic review', publicado por;"),
-                     h5("Jie Mei, Christian Desrosiers y Johannes Frasnelli de la Université de Montréal.
-                        Dentro del cual se analizan mas de 200 estudios enfocados al "), 
-                     h5("diagnostico de la Enfermedad de Parkinson (EP), mediante el uso de distintos modelos de Aprendizaje Maquina para diversos tipos
-                        de información"),
-                     h5("del usuario como lo son la voz y el dibujo de patrones."),
-                     
-                     img( style="align:justify", src = "https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/paper.png",
-                         height = 500, width = 720 ),
-                     
-                     h5("Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utilizado
-                        dentro de cada documento se utilizan distintas metricas de"), 
-                     h5("desempeño como lo son:
-                        Exactitud, Presicion, Sensibilidad, entre otras."),br(),br(),
-                     
-                     img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/outcomes.png?raw=true",
-                         height = 650, width = 950),br(),br(),
-                     
-                     h5("Dentro del estudio y analisis de los datos recopilados en las 
-                        bases de datos para la deteccion de parkinson por medio del uso de la voz se encuentran"),
-                     h5("los parametros de:
-                        edad, sexo, tiempo de prueba, motor UPDRS, total UPDRS, jitter y shimmer"),br(),
-                     
-                     img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true",
-                         height = 430, width = 650),br(),br(),
-                     
-                     h5("Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran
-                        los parametros de: genero, si es diestro"),
-                     h5("o zurdo, edad, maxima desviacion
-                        desviacion minima, desviacion estandar"),br(),
-                     
-                     img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true",
-                         height = 350, width = 600),br(),
+                    br(),br(),
+                     br(),br(),
+                    fluidRow(
+                        column(8,
+                               h2(align="center","Análisis de voz")
+                        )
+                    ),
+                    fluidRow(
+                        column(3,
+                               h5(align="justify","Dentro del estudio y analisis de los datos recopilados en las 
+                        bases de datos para la deteccion de parkinson por medio del uso de la voz se encuentran parametros de:
+                        pitch, jitter, shimmer y periodo junto con sus variaciones")
+                        ),
+                        column(8,
+                               img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true",
+                                   height = 430, width = 650) 
+                        )
+                    ),
+                     br(),
+                     br(),br(),
+                    fluidRow(
+                        column(8,
+                               h2(align="center","Análisis de pulso")
+                        )
+                    ),
+                    fluidRow(
+                        column(3,
+                               h5(align="justify","Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran
+                        los parametros de: genero, si es diestro o zurdo, edad, maxima desviacion
+                        desviacion minima, desviacion estandar")
+                        ),
+                        column(8,
+                               img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true",
+                                   height = 350, width = 600),br()
+                        )
+                    ),
                      
                      h3("Bibliografía:"),br(),
                      tags$a(href="https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/", 
