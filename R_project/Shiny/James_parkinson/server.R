@@ -147,8 +147,10 @@ shinyServer(function(input, output, session) {
         plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
             layout(title = 'Top outcomes')
     })
-    observe(session$setCurrentTheme(
-        if (isTRUE(input$dark_mode)) dark else light
-    ))  
+    #observe(session$setCurrentTheme(
+    
+    #    if (isTRUE(input$dark_mode)) dark else light
+    
+    #))  
 })
 
