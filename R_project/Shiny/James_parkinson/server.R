@@ -86,21 +86,26 @@ shinyServer(function(input, output, session) {
         }
     output$distPlot <- renderPlotly({
         colnum = as.numeric(input$select) + 7
-
+       
         #newdata <- voice.df[!is.na(voice.df[[colnum]]),] 
         acc <- ordered_query(voice.df,colnum,TRUE)#newdata[order(newdata[[colnum]]),]
+        #print(data.frame(str_split(acc$ML,"/")))
+        
+        xlabels <- data.frame(str_split_fixed(acc$ML, "/", 2))
+        print(dim(xlabels))
+        print((acc$ML))
         plot_ly(
             acc,
             y = acc[[colnum]],
-            x = acc$ML,
+            x = xlabels$X1,
             type = "scatter",
-            mode = "markers")%>%layout(title = 'Studies sorted by outcome selected', 
-               #margin = list(b = 300),
+            mode = "markers")%>%layout(title = 'Studies sorted by selected outcome ', 
+               margin = list(b = 120),
                yaxis = list(title = choices$var[as.numeric(input$select)]),
                 xaxis = list(tickangle = 45,
                     title = 'ML Methods',
                     categoryorder = "array",
-                    categoryarray = acc$ML)
+                    categoryarray = xlabels$X1)
             )
     })
     output$MLPiePlot <- renderPlotly({
