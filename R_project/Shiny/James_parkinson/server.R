@@ -141,7 +141,7 @@ shinyServer(function(input, output, session) {
         top_ordered_query(hand.df,as.numeric(input$bins_hdwr),as.numeric(input$select_hdwr) + 7)
     })
     output$MLPiePlot_hdwr <- renderPlotly({
-        pre_pie_table <- top_ordered_query(hand.df,as.numeric(input$bins_hdwr),as.numeric(input$select) + 7)
+        pre_pie_table <- top_ordered_query(hand.df,as.numeric(input$bins_hdwr),as.numeric(input$select_hdwr) + 7)
         colnames(pre_pie_table) <- c("concept","value")
         pie_table <- form_pie_table(pre_pie_table$concept)
         plot_ly(pie_table, labels = pie_table$ML_method, values = pie_table$Percentage, type = 'pie')%>%
