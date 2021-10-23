@@ -84,6 +84,7 @@ shinyServer(function(input, output, session) {
             pie_table$Percentage <- pie_table$Percentage/sum(pie_table$Percentage)
             return(pie_table)
         }
+        #Voice
     output$distPlot <- renderPlotly({
         colnum = as.numeric(input$select) + 7
 
