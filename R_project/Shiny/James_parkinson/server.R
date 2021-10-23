@@ -142,3 +142,4 @@ shinyServer(function(input, output, session) {
         if (isTRUE(input$dark_mode)) dark else light
     ))  
 })
+
