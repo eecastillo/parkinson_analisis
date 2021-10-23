@@ -86,7 +86,7 @@ shinyServer(function(input, output, session) {
         }
     output$distPlot <- renderPlotly({
         colnum = as.numeric(input$select) + 7
-        print(choices$var)
+
         #newdata <- voice.df[!is.na(voice.df[[colnum]]),] 
         acc <- ordered_query(voice.df,colnum,TRUE)#newdata[order(newdata[[colnum]]),]
         plot_ly(
@@ -95,8 +95,8 @@ shinyServer(function(input, output, session) {
             x = acc$ML,
             type = "scatter",
             mode = "markers")%>%layout(title = 'Studies sorted by outcome selected', 
-               margin = list(b = 300),
-               yaxis = list(title = choices$var[input$select]),
+               #margin = list(b = 300),
+               yaxis = list(title = choices$var[as.numeric(input$select)]),
                 xaxis = list(tickangle = 45,
                     title = 'ML Methods',
                     categoryorder = "array",
@@ -126,7 +126,8 @@ shinyServer(function(input, output, session) {
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
             layout(title = 'Studies sorted by outcome selected',
-                xaxis = list(
+               yaxis = list(title = choices_hdwr$var[as.numeric(input$select_hdwr)]),
+                xaxis = list(title="ML Methods",
                     categoryorder = "array",
                     categoryarray = acc$ML)
             )
