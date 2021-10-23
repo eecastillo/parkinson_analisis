@@ -44,8 +44,8 @@ shinyUI(
                         de información"),
                      h5("del usuario como lo son la voz y el dibujo de patrones."),
                      
-                     img( style="align:justify", src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/paper.png?raw=true",
-                         height = 940, width = 720 ),
+                     img( style="align:justify", src = "https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/paper.png",
+                         height = 500, width = 720 ),
                      
                      h5("Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utilizado
                         dentro de cada documento se utilizan distintas metricas de"), 
