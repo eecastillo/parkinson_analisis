@@ -61,10 +61,17 @@ shinyServer(function(input, output, session) {
             colnames(top.df) <- c("ML method(s)",as.character(colnames(dataframe[colnum])))
             return(top.df)
         }
-        ML_methods <- c("LS-SVM", "PNN", "SVM-RBF","SVM-linear","SCFW-KELM","SVM","FKNN",
-                        "ECFA-SVM","DNN","SMO","Pegasos","AdaBoost","FBANN","rotation forest","NNge",
-                        "logistic regression","KNN","naïve Bayes","decision tree","random forest","CNN",
-                        "LSSVM-RBF","MLP","joint learning","ELM","NN","EER");
+        ML_methods <- c("Fuzzy neural system","RPART","LS-SVM", "PNN","SVM-RBF","SVM-linear","SCFW-KELM",
+                        "SVM","FKNN","ECFA-SVM","DNN","SMO","Pegasos","AdaBoost","FBANN","Rotation forest",
+                        "NNge","Logistic regression","KNN","Naive Bayes","Decision tree","Random forest","CNN",
+                        "LSSVM-RBF","MLP","Joint learning","ELM","NN","EER","Linear regression","LDA-NN-GA",
+                        "NNge","KELM","GRNN","ECFA-SVM","Fuzzy classifier","Boosted decision tree","Decision forests",
+                        "Elastic Net regularized logistic regression","Random tree", "Boosted logistic regression",
+                        "ANN","CART","CNN-DL","CR-ML","RA-ML","EWNN","Stacket generalization","RLDA","RFS-LDA",
+                        "IGWO-KELM","SCFW-KELM","FURIA","MLP","SVM(multi-kernel)","CNN(VGG and ResNet)","FCN","GCN",
+                        "Ensemble selection","Ensemble learning","Bagging ensemble","GLRA","FLDA","DA","SVM-polynomial",
+                        "SVM-MLP","LSTM-based NN","Gradient boosted decision trees","ResNet");
+
         form_pie_table <- function(dataframe)
         {
             pie_table <- data.frame(ML_methods,vector(mode="numeric", length=length(ML_methods)))
@@ -84,13 +91,13 @@ shinyServer(function(input, output, session) {
         plot_ly(
             acc,
             y = acc[[colnum]],
-            x = acc$Machine.learning.method.s..,
+            x = acc$ML,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
             layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
-                    categoryarray = acc$Machine.learning.method.s..)
+                    categoryarray = acc$ML)
             )
     })
     output$MLPiePlot <- renderPlotly({
