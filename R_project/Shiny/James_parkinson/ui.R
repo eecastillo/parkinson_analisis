@@ -11,6 +11,22 @@ library(shiny)
 library(bslib)
 library(shinyWidgets)
 library(shinythemes)
+library(plotly)
+voice_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_voice.csv")
+voice.df <- data.frame(voice_csv,stringsAsFactors = FALSE)
+hand_csv <- read.csv("https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/clean_handwriting.csv",sep = "|")
+hand.df <- data.frame(hand_csv, stringsAsFactors = FALSE)
+choices = data.frame(
+    var = colnames(voice.df[8:31]),
+    num = 1:24
+)
+choices_hdwr = data.frame(
+    var = colnames(hand.df[8:19]),
+    num = 1:12
+)
+# List of choices for selectInput
+outcomes_list <- as.list(choices$num)
+outcomes_hdwr_list <- as.list(choices_hdwr$num)
 #light <- bs_theme(version = 4, bootswatch = "minty")
 #dark <- bs_theme(bg = "black", fg = "white", primary = "pink")
 
@@ -203,7 +219,7 @@ shinyUI(
                                      
                                      fluidRow(
                                          column(4, #style = "background-color:#F0F4F5;",
-                                                #"Accuracy",
+                                                #"Accuracy"
                                                 img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_accuracy.png?raw=true",
                                                     height = 250, width = 400
                                                 )
