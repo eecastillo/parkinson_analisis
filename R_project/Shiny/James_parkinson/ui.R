@@ -193,24 +193,172 @@ shinyUI(
             ), # End Handwriting analysis
             
             tabPanel("Model EP",
-                     
-                     mainPanel(
-                         tabsetPanel(
-                             tabPanel("Logistic Regresion",
-                                      h4("Table"),
-                                      tableOutput("table"),
-                                      h4("Verbatim text output"),
-                                      verbatimTextOutput("txtout"),
-                                      h1("Header 1"),
-                                      h2("Header 2"),
-                                      h3("Header 3"),
-                                      h4("Header 4"),
-                                      h5("Header 5")
-                             ),
-                             tabPanel("Model SVM: Full Features", "This panel is intentionally left blank"),
-                             tabPanel("Model SVM: Half Features", "This panel is intentionally left blank")
-                         )
-                     )
+                mainPanel(
+                    tabsetPanel(
+                        #MODEL LOGISTIC REGRESION
+                        tabPanel("Logistic Regresion",
+                            fluidRow(
+                                column(12, style="text-align:center",br(),br(),
+                                h3("Model metrics"),br(),
+                                ),
+                                  
+                                fluidRow(
+                                    column(4, #style = "background-color:#F0F4F5;",
+                                         #"Accuracy",
+                                         img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/accuracy_logreg.png?raw=true",
+                                            height = 250, width = 400
+                                         )
+                                         # half screen models
+                                    ),
+                                  
+                                    column(4,
+                                         #"Precision",
+                                         img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/precision_logreg.png?raw=true",
+                                            height = 250, width = 400
+                                         )
+                                    ),
+                                    column(4,
+                                         #"Recall",
+                                         img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/recall_logreg.png?raw=true",
+                                             height = 250, width = 400
+                                         )
+                                    ), # 1 part
+                                    
+                                    column(12, style="text-align:center",br(),br(),
+                                           h3("Confusion matrix & Curve ROC"),br(),
+                                    ),
+                                        column(6,
+                                               img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/logic/realidad_estimado.jpeg?raw=true"
+                                                   # height = 350, width = 600
+                                               )       
+                                        ),
+                                        column(6, style="text-align:right",
+                                               img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/logic/auc_roc-curve.jpeg?raw=true",
+                                                   height = 450, width = 550
+                                               ) 
+                                        ),
+                                )
+                            )
+                        ),
+                        #MODEL FULL
+                        tabPanel("Model SVM: Full Features", 
+                                 fluidRow(
+                                     column(12, style="text-align:center",br(),br(),
+                                            h3("Model metrics"),br(),
+                                     ),
+                                     
+                                     fluidRow(
+                                         column(4, #style = "background-color:#F0F4F5;",
+                                                #"Accuracy",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_accuracy.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                                # half screen models
+                                         ),
+                                         
+                                         column(4,
+                                                #"Precision",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_precision.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ),
+                                         column(4,
+                                                #"Recall",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_recall.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ), # 1 part
+                                         
+                                         column(12, style="text-align:center",br(),br(),
+                                                h3("Confusion matrix & Curve ROC"),br(),
+                                         ),
+                                         column(6,
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/realidad-estimado.jpeg?raw=true"
+                                                    # height = 350, width = 600
+                                                )       
+                                         ),
+                                         column(6, style="text-align:right",
+                                                img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/auc_roc-curve.jpeg?raw=true",
+                                                     height = 450, width = 550
+                                                ) 
+                                         ),
+                                     )
+                                 )
+                        ),
+                        #MODEL HALF
+                        tabPanel("Model SVM: Half Features",
+                                 fluidRow(
+                                     column(12, style="text-align:center",br(),br(),
+                                            h3("Model metrics"),br(),
+                                     ),
+                                     
+                                     fluidRow(
+                                         column(4, #style = "background-color:#F0F4F5;",
+                                                #"Accuracy",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_half_accuracy.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                                # half screen models
+                                         ),
+                                         
+                                         column(4,
+                                                #"Precision",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_precision.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ),
+                                         column(4,
+                                                #"Recall",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_half_recall.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ), # 1 part
+                                         
+                                         column(12, style="text-align:center",br(),br(),
+                                                h3("Confusion matrix & Curve ROC"),br(),
+                                         ),
+                                         column(6,
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/realidad_estimado.jpeg?raw=true"
+                                                    # height = 350, width = 600
+                                                )       
+                                         ),
+                                         column(6, style="text-align:right",
+                                                img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/auc_roc-curve.jpeg?raw=true",
+                                                     height = 450, width = 550
+                                                ) 
+                                         ),
+                                     )
+                                 )
+                        ), # half screen models
+                             
+                        #AUDIO
+                        tabPanel("Library", 
+                            fluidRow(
+                                column(12, style="text-align:center",br(),br(),
+                                       h3("Parselmouth"),br(),
+                                       img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/parselmouth.jpeg?raw=true"
+                                           # height = 350, width = 600
+                                       )
+                                ),
+                                
+                                column(12, style="text-align:center",br(),br(),
+                                    h3("Audio Analysis - Test"),br(),
+                                ),
+                                column(6,
+                                    img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/sound_wave.jpeg?raw=true"
+                                        # height = 350, width = 600
+                                    )      
+                                ),
+                                column(6, style="text-align:right",
+                                    img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/spectrogram.jpeg?raw=true"
+                                        #height = 350, width = 600
+                                    )
+                                ),
+                            )
+                        )
+                    )
+                    
+                )# main Panel
                             
             ) # End tabPanel
            
