@@ -58,23 +58,28 @@ shinyUI(
                      h5("Dentro del estudio y analisis de los datos recopilados en las 
                         bases de datos para la deteccion de parkinson por medio del uso de la voz se encuentran"),
                      h5("los parametros de:
-                        Edad, Sexo, Tiempo de prueba, Motor UPDRS, Total UPDRS, Jitter y Shimmer"),br(),
+                        edad, sexo, tiempo de prueba, motor UPDRS, total UPDRS, jitter y shimmer"),br(),
                      
                      img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true",
-                         height = 530, width = 850),br(),
+                         height = 430, width = 650),br(),br(),
                      
                      h5("Para el diagnostico de la enfermedad mediante el uso de los datos recopilados al dibujar patrones se encuentran
-                        los parametros de: Genero, si es diestro o zurdo, Edad, Maxima desviacion
-                        Desviacion minima, Desviacion estandar"),br(),
+                        los parametros de: genero, si es diestro"),
+                     h5("o zurdo, edad, maxima desviacion
+                        desviacion minima, desviacion estandar"),br(),
                      
                      img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true",
-                         height = 250, width = 500),br(),
+                         height = 350, width = 600),br(),
                      
                      h3("Bibliografía:"),br(),
-                     tags$a(href="https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/", "https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/"),hr(),
-                     tags$a(href="https://arxiv.org/pdf/2010.06101.pdf", "https://arxiv.org/pdf/2010.06101.pdf"),hr(),
-                     tags$a(href="https://www.larescvalenciana.org/abc-del-parkinson/", "https://www.larescvalenciana.org/abc-del-parkinson/"),hr(),
-                     tags$a(href="https://medlineplus.gov/spanish/parkinsonsdisease.html", "https://medlineplus.gov/spanish/parkinsonsdisease.html"),hr(),
+                     tags$a(href="https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/", 
+                            "https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/"),hr(),
+                     tags$a(href="https://arxiv.org/pdf/2010.06101.pdf", 
+                            "https://arxiv.org/pdf/2010.06101.pdf"),hr(),
+                     tags$a(href="https://www.larescvalenciana.org/abc-del-parkinson/", 
+                            "https://www.larescvalenciana.org/abc-del-parkinson/"),hr(),
+                     tags$a(href="https://medlineplus.gov/spanish/parkinsonsdisease.html", 
+                            "https://medlineplus.gov/spanish/parkinsonsdisease.html"),hr(),
                      tags$a(href="https://conoceelparkinson.org/sintomas/confinamiento-sintomas-enfermedad-parkinson/",
                             "https://conoceelparkinson.org/sintomas/confinamiento-sintomas-enfermedad-parkinson/"),hr(),
                      tags$a(href="https://conoceelparkinson.org/cuidados/dia-mundial-parkinson-2021/",
