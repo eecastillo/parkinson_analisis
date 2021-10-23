@@ -50,7 +50,7 @@ shinyServer(function(input, output, session) {
             ordered.df <- ordered_query(dataframe,colnum,FALSE)   
             
             ML <- ordered.df$ML
-            print(ordered.df)
+            print(ML)
             # ML
            # ML[ML==""] <- ordered.df$Machine.learning.method.s..
             top.df <- data.frame(ML, ordered.df[[colnum]])
@@ -84,13 +84,13 @@ shinyServer(function(input, output, session) {
         plot_ly(
             acc,
             y = acc[[colnum]],
-            x = acc$Machine.learning.method.s..,
+            x = acc$ML,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
             layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
-                    categoryarray = acc$Machine.learning.method.s..)
+                    categoryarray = acc$ML)
             )
     })
     output$MLPiePlot <- renderPlotly({
@@ -112,13 +112,13 @@ shinyServer(function(input, output, session) {
         plot_ly(
             acc,
             y = acc[[colnum]],
-            x = acc$Machine.learning.method.s.,
+            x = acc$ML,
             type = "scatter",
             mode = "markers")%>% layout(xaxis = list(type = "category"))%>%
             layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
-                    categoryarray = acc$Machine.learning.method.s. )
+                    categoryarray = acc$ML )
             )
     })
     output$view_hdwr <- renderTable({
