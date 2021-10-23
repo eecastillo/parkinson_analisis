@@ -43,6 +43,14 @@ shinyUI(
                         dando lugar a los síntomas motores típicos, como el temblor en reposo o la rigidez.")
                          )
                      ),
+                     fluidRow(
+                         column(1),
+                         column(8,
+                                img(align="left", src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/parkinson.jpg?raw=true",
+                                     height = 500, width = 750 )
+                         )
+                     ),
+                     
                      br(),
                      fluidRow(
                          column(8,
