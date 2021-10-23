@@ -50,7 +50,7 @@ shinyServer(function(input, output, session) {
             ordered.df <- ordered_query(dataframe,colnum,FALSE)   
             
             ML <- ordered.df$ML
-            print(ordered.df)
+            print(ML)
             # ML
            # ML[ML==""] <- ordered.df$Machine.learning.method.s..
             top.df <- data.frame(ML, ordered.df[[colnum]])
@@ -125,7 +125,11 @@ shinyServer(function(input, output, session) {
             layout(title = 'Studies sorted by outcome selected',
                 xaxis = list(
                     categoryorder = "array",
+<<<<<<< HEAD
                     categoryarray = acc$ML)
+=======
+                    categoryarray = acc$ML )
+>>>>>>> 0b43b660b2024dbb453d846438b80f1a97ff8130
             )
     })
     output$view_hdwr <- renderTable({
