@@ -5,9 +5,9 @@ account: r6x320-fernando0maldonado
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4939295
-bundleId: 5169435
+bundleId: 5169475
 url: https://r6x320-fernando0maldonado.shinyapps.io/James_Parkinson/
-when: 1634981370.70399
-lastSyncTime: 1634981370.70399
+when: 1634982735.64099
+lastSyncTime: 1634982735.64099
 asMultiple: FALSE
 asStatic: FALSE
