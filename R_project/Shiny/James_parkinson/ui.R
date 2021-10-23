@@ -44,8 +44,8 @@ shinyUI(
                         de información"),
                      h5("del usuario como lo son la voz y el dibujo de patrones."),
                      
-                     img( style="align:justify", src = "https://raw.githubusercontent.com/eecastillo/parkinson_analisis/master/R_project/Shiny/files/paper.png",
-                         height = 500, width = 720 ),
+                     img( style="align:justify", src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/paper.png?raw=true",
+                         height = 940, width = 720 ),
                      
                      h5("Para cada modelo utilizado para el analisis y diagnostico de la enfermedad utilizado
                         dentro de cada documento se utilizan distintas metricas de"), 
@@ -152,8 +152,8 @@ shinyUI(
                         #MODEL LOGISTIC REGRESION
                         tabPanel("Logistic Regresion",
                             fluidRow(
-                                column(12,
-                                h4("Model metrics"),
+                                column(12, style="text-align:center",br(),br(),
+                                h3("Model metrics"),br(),
                                 ),
                                   
                                 fluidRow(
@@ -176,41 +176,138 @@ shinyUI(
                                          img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/recall_logreg.png?raw=true",
                                              height = 250, width = 400
                                          )
-                                         
-                                    )
+                                    ), # 1 part
+                                    
+                                    column(12, style="text-align:center",br(),br(),
+                                           h3("Confusion matrix & Curve ROC"),br(),
+                                    ),
+                                        column(6,
+                                               img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/logic/realidad_estimado.jpeg?raw=true"
+                                                   # height = 350, width = 600
+                                               )       
+                                        ),
+                                        column(6, style="text-align:right",
+                                               img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/logic/auc_roc-curve.jpeg?raw=true",
+                                                   height = 450, width = 550
+                                               ) 
+                                        ),
                                 )
                             )
                         ),
                         #MODEL FULL
                         tabPanel("Model SVM: Full Features", 
-                            "This panel is intentionally left blank",
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/realidad-estimado.jpeg?raw=true"
-                              # height = 350, width = 600
-                            ),
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/auc_roc-curve.jpeg?raw=true"
-                              # height = 350, width = 600
-                            )
+                                 fluidRow(
+                                     column(12, style="text-align:center",br(),br(),
+                                            h3("Model metrics"),br(),
+                                     ),
+                                     
+                                     fluidRow(
+                                         column(4, #style = "background-color:#F0F4F5;",
+                                                #"Accuracy",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_accuracy.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                                # half screen models
+                                         ),
+                                         
+                                         column(4,
+                                                #"Precision",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_precision.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ),
+                                         column(4,
+                                                #"Recall",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_recall.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ), # 1 part
+                                         
+                                         column(12, style="text-align:center",br(),br(),
+                                                h3("Confusion matrix & Curve ROC"),br(),
+                                         ),
+                                         column(6,
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/realidad-estimado.jpeg?raw=true"
+                                                    # height = 350, width = 600
+                                                )       
+                                         ),
+                                         column(6, style="text-align:right",
+                                                img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/half_features/auc_roc-curve.jpeg?raw=true",
+                                                     height = 450, width = 550
+                                                ) 
+                                         ),
+                                     )
+                                 )
                         ),
                         #MODEL HALF
-                        tabPanel("Model SVM: Half Features", 
-                            "This panel is intentionally left blank",
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/realidad_estimado.jpeg?raw=true"
-                              # height = 350, width = 600
-                            ),
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/auc_roc-curve.jpeg?raw=true"
-                              # height = 350, width = 600
-                            )
+                        tabPanel("Model SVM: Half Features",
+                                 fluidRow(
+                                     column(12, style="text-align:center",br(),br(),
+                                            h3("Model metrics"),br(),
+                                     ),
+                                     
+                                     fluidRow(
+                                         column(4, #style = "background-color:#F0F4F5;",
+                                                #"Accuracy",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_half_accuracy.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                                # half screen models
+                                         ),
+                                         
+                                         column(4,
+                                                #"Precision",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_full_precision.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ),
+                                         column(4,
+                                                #"Recall",
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/svm_rbf_half_recall.png?raw=true",
+                                                    height = 250, width = 400
+                                                )
+                                         ), # 1 part
+                                         
+                                         column(12, style="text-align:center",br(),br(),
+                                                h3("Confusion matrix & Curve ROC"),br(),
+                                         ),
+                                         column(6,
+                                                img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/realidad_estimado.jpeg?raw=true"
+                                                    # height = 350, width = 600
+                                                )       
+                                         ),
+                                         column(6, style="text-align:right",
+                                                img( src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/full_features/auc_roc-curve.jpeg?raw=true",
+                                                     height = 450, width = 550
+                                                ) 
+                                         ),
+                                     )
+                                 )
                         ), # half screen models
                              
                         #AUDIO
-                        tabPanel("Audio", 
-                            "This panel is intentionally left blank",
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/sound_wave.jpeg?raw=true"
-                            # height = 350, width = 600
-                            ),
-                              
-                            img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/spectrogram.jpeg?raw=true"
-                            #height = 350, width = 600
+                        tabPanel("Library", 
+                            fluidRow(
+                                column(12, style="text-align:center",br(),br(),
+                                       h3("Parselmouth"),br(),
+                                       img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/parselmouth.jpeg?raw=true"
+                                           # height = 350, width = 600
+                                       )
+                                ),
+                                
+                                column(12, style="text-align:center",br(),br(),
+                                    h3("Audio Analysis - Test"),br(),
+                                ),
+                                column(6,
+                                    img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/sound_wave.jpeg?raw=true"
+                                        # height = 350, width = 600
+                                    )      
+                                ),
+                                column(6, style="text-align:right",
+                                    img(src = "https://github.com/eecastillo/parkinson_analisis/blob/master/img_ml/sound/spectrogram.jpeg?raw=true"
+                                        #height = 350, width = 600
+                                    )
+                                ),
                             )
                         )
                     )
