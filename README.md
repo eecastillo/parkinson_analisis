@@ -58,8 +58,10 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
    ...🐱‍👤
   </details>
   </ul>
+  
 ### Demo Shiny  
   https://r6x320-fernando0maldonado.shinyapps.io/James_Parkinson/
+  
 ### Q&A 💬
 ▶ **`Preguntas y respuestas`**
   <ul>
