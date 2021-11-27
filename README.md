@@ -1,21 +1,33 @@
 
 
 ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-green?style=flat&logo=markdown&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-%23F05032?style=flat&logo=git&logoColor=%23ffffff)
-![Python](https://img.shields.io/badge/-Python-yellow)
+![Python](http://img.shields.io/badge/-Python-yellow?style=flat&logo=python&logoColor=ffffff)
+<!---
+![Python](https://img.shields.io/badge/-Python-3776AB)
+-->
+
 ---
-  
+# Seminario Data Scientist BEDU  
 # Parkinson Análisis
 
-### Indice
-  - **[Descripción](#Descripción)**
-    - [Parkinson]()
+### Índice
+
+  - **[Introducción](#🔠 Introducción)**
+  	- [Parkinson]()
+  - **[Desarrollo](#)**
+  	- [ETL - Extracción, Transformación y Carga](#)
+  	- [Anáslisis de Datos](#)
+  - **[Conclusión](#)**
+  	- [En un futuro no lejano](#)
+  	- [Q&A](#)
+  	- [Demo Shiny](#Demo-Shiny)
   - **[Enlaces de Interés](#Enlaces-de-Interés)**
-  - **[Demo Shiny](#Demo-Shiny)** 
+  
 
 
-### Descripción
+## 🔠 Introducción
 
 El siguiente análisis de la **Enfermedad de Parkinson** está basado en los datasets provenientes del documento **"Machine learning for the diagnosis of Parkinson’s
 disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Frasnelli
@@ -39,7 +51,8 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 	■ Parkinson.  
 	■ R y R Shiny.
 
-### Desarrollo 🥼
+## Desarrollo 🥼
+### ETL - Extracción, Transformación y Carga
 ▶ **`Breve descripción de lo hecho con la limpieza de los datos`**
   <ul>
   <details open>
