@@ -14,16 +14,16 @@
 
 ### Índice
 
-  - **[Introducción](#🔠 Introducción)**
+  - **[Introducción](#-Introducción)**
   	- [Parkinson]()
-  - **[Desarrollo](#)**
-  	- [ETL - Extracción, Transformación y Carga](#)
-  	- [Anáslisis de Datos](#)
-  - **[Conclusión](#)**
-  	- [En un futuro no lejano](#)
-  	- [Q&A](#)
-  	- [Demo Shiny](#Demo-Shiny)
-  - **[Enlaces de Interés](#Enlaces-de-Interés)**
+  - **[Desarrollo](#-Desarrollo)**
+  	- [ETL - Extracción, Transformación y Carga](#-ETL - Extracción, Transformación y Carga)
+  	- [Anáslisis de Datos](#-Anáslisis de Datos)
+  - **[Conclusión](#-Conclusión)**
+  	- [Demo Shiny](#-Demo-Shiny)
+	- [En un futuro no lejano](#-En un futuro no lejano)
+  	- [Q&A](#-Q&A)
+  	- [Enlaces de Interés](#-Enlaces-de-Interés)
   
 
 
@@ -35,7 +35,7 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 > 📌  **James Parkinson**, fue el médico británico que describió por primera vez la «parálisis agitante», término que él mismo acuñó.
 	
   
-#### Parkinson
+### Parkinson
 
 <div style="text-align: justify;">
 <img align="left" src="https://www.intramed.net/UserFiles/vinetas/93250.jpg" height="150" width="250"  hspace="32" style="padding:500">
@@ -51,8 +51,8 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
 	■ Parkinson.  
 	■ R y R Shiny.
 
-## Desarrollo 🥼
-### ETL - Extracción, Transformación y Carga
+## 🥼 Desarrollo
+### 🛠 ETL - Extracción, Transformación y Carga
 ▶ **`Breve descripción de lo hecho con la limpieza de los datos`**
   <ul>
   <details open>
@@ -72,10 +72,14 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
   </details>
   </ul>
   
-### Demo Shiny  
+### 📈 Anáslisis de Datos
+
+## 🏁 Conclusión
+
+### 🖥 Demo Shiny  
   https://r6x320-fernando0maldonado.shinyapps.io/James_Parkinson/
   
-### Q&A 💬
+### 💬 Q&A
 ▶ **`Preguntas y respuestas`**
   <ul>
   <details>
@@ -94,8 +98,10 @@ disease: A systematic review"** de Jie Mei, Christian Desrosiers and Johannes Fr
    😃 ...
   </details>
   </ul>
-  
-### Enlaces de Interés
+
+### 🔮 En un futuro no lejano
+
+### 🔗 Enlaces de Interés
 - [Parkinson](https://www.mayoclinic.org/es-es/diseases-conditions/parkinsons-disease/symptoms-causes/syc-20376055 " Enfermedad de Parkinson")
 - [Diapositivas](https://labs.phaser.io/index.html "---")
 - [Machine learning for the diagnosis of Parkinson’s
