@@ -15,15 +15,15 @@
 ### Índice
 
   - **[Introducción](#-Introducción)**
-  	- [Parkinson]()
+  	- [Parkinson](#parkinson)
   - **[Desarrollo](#-Desarrollo)**
-  	- [ETL - Extracción, Transformación y Carga](#-ETL - Extracción, Transformación y Carga)
-  	- [Anáslisis de Datos](#-Anáslisis de Datos)
+  	- [ETL - Extracción, Transformación y Carga](#-etl---extracción-transformación-y-carga)
+  	- [Anáslisis de Datos](#-anáslisis-de-datos)
   - **[Conclusión](#-Conclusión)**
   	- [Demo Shiny](#-Demo-Shiny)
-	- [En un futuro no lejano](#-En un futuro no lejano)
-  	- [Q&A](#-Q&A)
-  	- [Enlaces de Interés](#-Enlaces-de-Interés)
+	- [En un futuro no lejano](#-en-un-futuro-no-lejano)
+  	- [Q&A](#-qa)
+  	- [Enlaces de Interés](#-enlaces-de-interés)
   
 
 
