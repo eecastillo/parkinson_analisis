@@ -83,40 +83,16 @@ Exactitud, Presicion, Sensibilidad, entre otras.
 <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/outcomes.png?raw=true" height = 350, width = 450>
 </p>
 <br>
-
-#
-<!---
-|  Análisis de voz  |  Análisis de pulso |
-|---|---|
-|  Dentro del estudio y análisis de los datos recopilados en las <br> bases de datos para la deteccion de parkinson por medio del uso <br> de la voz se encuentran parametros de: pitch, jitter, shimmer y <br> periodo junto con sus variaciones. <br> <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 230, width = 350 > | Para el diagnostico de la enfermedad mediante el uso de los datos <br> recopilados al dibujar patrones se encuentran los parametros de: <br> genero, si es diestro o zurdo, edad, máxima desviacion desviacion <br> minima, desviacion estandar. <br> <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true" height = 250, width = 300 >
---->
-	
-<div  >
-
-Análisis de voz <br>
-	Dentro del estudio y análisis de <br> 
-	los datos recopilados en las <br>
-	bases de datos para la deteccion <br> 
-	de parkinson por medio del uso <br> 
-	de la voz se encuentran parametros de: <br> 
-	pitch, jitter, shimmer y <br> 
-	periodo junto con sus variaciones. <br> 
-	<img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 230, width = 350 >
-</div>
 	
 
-<div style="width: 50%" >
-Análisis de pulso <br>
-	Para el diagnostico de la enfermedad <br> 
-	mediante el uso de los datos <br> 
-	recopilados al dibujar patrones se <br> 
-	encuentran los parametros de: <br> 
-	genero, si es diestro o zurdo, edad, <br> 
-	máxima desviacion desviacion minima, <br> 
-	desviacion estandar. <br> 
-	<img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true" height = 250, width = 300 >
+Analisis de voz            |    Media
+:-------------------------:|:-------------------------:
+Dentro del estudio y analisis de los datos recopilados<br> en las bases de datos para la deteccion de parkinson<br> por medio del uso de la voz se envuentran parametros de:<br> pitch, jitter, shimmer y el periodo junto con sus variaciones.| <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/voice.png?raw=true" height = 230, width = 350 >
+	
 
-</div>
+Analisis de pulso          |    Media
+:-------------------------:|:-------------------------:	
+Para el diagnostico de la enfermedad mediante el uso <br> de los datos recopilados al dibujar patrones se <br> encuentran los parametros de: genero,<br>  si es diestro o zurdo, edad,máxima desviacion,<br> desviacion minima, desviacion estandar.<br>| <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true" height = 250, width = 300 >
 	
 
 	
