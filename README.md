@@ -182,6 +182,8 @@ Recall			   |	0.8368
 ![image](https://user-images.githubusercontent.com/19128178/144709861-dc8535c2-0781-4215-b4d8-592156e5416d.png)
 
 ### Polynomial Regression
+[Parkinson_regresion_polinomial.ipynb](/notebooks/Parkinson_regresion_polinomial.ipynb)
+
 Train size: 75%
 Test size: 25%
 
@@ -196,6 +198,8 @@ Fifth			   |Training: MSE =2.9573820705183283e-19<br>Test: MSE =1549021.09809675
 En base a lo visto con los resultados de la regresion polinomial pudimos observar que al incrementar el grado del polinomio reducirá el Mean square error en el entrenamiento pero incrementará en las pruebas, esto es debido a que se genera el llamado overfitting.
 
 ### SVM
+[Parkinson_SVM.ipynb](/notebooks/Parkinson_SVM.ipynb)
+
 Train size: 75%
 Test size: 25%
 
