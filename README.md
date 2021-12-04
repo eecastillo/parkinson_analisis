@@ -126,17 +126,32 @@ Para el diagnostico de la enfermedad mediante el uso <br> de los datos recopilad
   </details>
   </ul>
 ### 📈 Anáslisis de Datos
-columna 1: Subject id, entero
 
-columna 2-27: features
-elementos 1-5: Jitter (local),Jitter (local, absolute),Jitter (rap),Jitter (ppq5),Jitter (ddp), flotantes
-elementos 6-11: Shimmer (local),Shimmer (local, dB),Shimmer (apq3),Shimmer (apq5), Shimmer (apq11),Shimmer (dda), flotantes
-elementos 12-14: AC,NTH,HTN, flotantes
-elementos 15-19: Median pitch,Mean pitch,Standard deviation,Minimum pitch,Maximum pitch, flotantes
-elementos 20-23: Number of pulses,Number of periods,Mean period,Standard deviation of period, flotantes
-elementos 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degree of voice breaks flotantes
 
-column 28: class information entero
+Dato	                   |    Tipo de dato
+:-------------------------:|:-------------------------:
+ID			   |	int
+Jitter(local)		   |    float
+Jitter (local, absolute)   | 	float
+Jitter (rap)		   | float
+Jitter (ppq5)		   | float
+Jitter (ddp)		   | float
+Shimmer (local)		   | float
+Shimmer (local, dB)	   | float
+Shimmer (apq3)		   | float
+Shimmer (apq5)		   | float
+Shimmer (apq11)		   | float
+Shimmer (dda)		   | float
+AC			   | float
+NTH			   | float
+HTN			   | float
+Median pitch			   | float
+Mean pitch			   | float
+Standard deviation of period			   | float
+Fraction of locally unvoiced frames			   | float
+Number of voice breaks			   | int
+Degree of voice breaks			   | int
+Class information			   | int
 
 ### Desarrollo con R y Shiny
 
