@@ -93,10 +93,7 @@ Dentro del estudio y analisis de los datos recopilados<br> en las bases de datos
 Analisis de pulso          |    Media
 :-------------------------:|:-------------------------:	
 Para el diagnostico de la enfermedad mediante el uso <br> de los datos recopilados al dibujar patrones se <br> encuentran los parametros de: genero,<br>  si es diestro o zurdo, edad,máxima desviacion,<br> desviacion minima, desviacion estandar.<br>| <img src = "https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/handwriting.png?raw=true" height = 250, width = 300 >
-	
 
-	
-	
 <br>
 <br>
 				    
@@ -107,24 +104,6 @@ Para el diagnostico de la enfermedad mediante el uso <br> de los datos recopilad
 <br>
 
 ## 🥼 Desarrollo
-### 🛠 ETL - Extracción, Transformación y Carga
-  <ul>
-  <details open>
-  <summary> 📑 </summary>
-    1._ Se descargó el documento.PDF <b>"Machine learning for the diagnosis of Parkinson’s disease: A systematic review"</b> </br>  
-    2._ Se convirtió el documento a formato DOCX </br>
-	2.1._ Se seleccionaron los datos a utilizar. </br>
-	2.2._ Se formateó los datos de las tablas de interés a utilizar. </br> 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 4: Studies that applied machine learning models to voice recordings to diagnose PD (n = 55). </br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 5: Studies that applied machine learning models to movement or gait data to diagnose PD (n = 51). </br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 6: Studies that applied machine learning models to MRI data to diagnose PD (n = 36). </br>
-    3._ Se extrajo los datos por filas de todas las tablas de interés del documento.DOCX </br>
-    4._ Se transcribió los datos en documentos.xlsx </br>
-    5._ Se uso pipe o pleca ( | ) para la separación de los datos en columnas. </br>
-    6._ Se modificarón modificarón algunas columnas dependiendo de la finalización que se requería con los datos. Más info aquí. </br>
-   ...🐱‍👤
-  </details>
-  </ul>
 ### 📈 Anáslisis de Datos
 
 
@@ -145,23 +124,82 @@ Shimmer (dda)		   | float
 AC			   | float
 NTH			   | float
 HTN			   | float
-Median pitch			   | float
-Mean pitch			   | float
-Standard deviation of period			   | float
-Fraction of locally unvoiced frames			   | float
-Number of voice breaks			   | int
-Degree of voice breaks			   | int
-Class information			   | int
+Median pitch	           | float
+Mean pitch	           | float
+Standard deviation of period   | float
+Fraction of locally unvoiced frames  | float
+Number of voice breaks	   | int
+Degree of voice breaks	   | int
+Class information	   | int
+
+### 🛠 ETL - Extracción, Transformación y Carga
+  <ul>
+  <details open>
+  <summary> 📑 </summary>
+    1._ Se descargó el documento.PDF <b>"Machine learning for the diagnosis of Parkinson’s disease: A systematic review"</b> </br>  
+    2._ Se convirtió el documento a formato DOCX </br>
+	2.1._ Se seleccionaron los datos a utilizar. </br>
+	2.2._ Se formateó los datos de las tablas de interés a utilizar. </br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 4: Studies that applied machine learning models to voice recordings to diagnose PD (n = 55). </br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 5: Studies that applied machine learning models to movement or gait data to diagnose PD (n = 51). </br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Table 6: Studies that applied machine learning models to MRI data to diagnose PD (n = 36). </br>
+    3._ Se extrajo los datos por filas de todas las tablas de interés del documento.DOCX </br>
+    4._ Se transcribió los datos en documentos.xlsx </br>
+    5._ Se uso pipe o pleca ( | ) para la separación de los datos en columnas. </br>
+    6._ Se modificarón modificarón algunas columnas dependiendo de la finalización que se requería con los datos. Más info aquí. </br>
+   ...🐱‍👤
+  </details>
+  </ul>
+
 
 ### Desarrollo con R y Shiny
-
+<img src="https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/shiny_1.png" >
+<img src="https://github.com/eecastillo/parkinson_analisis/blob/master/R_project/Shiny/files/shiny_2.png" >
 
 ### 🖥 Demo Shiny  
   https://r6x320-fernando0maldonado.shinyapps.io/James_Parkinson/
   
-## Procesamiento de datos con Python
 ## Analisis de datos con Python
+![image](https://user-images.githubusercontent.com/19128178/144709563-4c7aea3e-e21d-4329-801a-5c108b4efd96.png)
+![image](https://user-images.githubusercontent.com/19128178/144709586-ff03ccfb-a87e-49e4-bc45-28601387f238.png)
+![image](https://user-images.githubusercontent.com/19128178/144709625-a9cb90c3-97e3-4fae-afe6-dc36b3663c48.png)
+![image](https://user-images.githubusercontent.com/19128178/144709633-0aee2d2e-1bbb-4996-8bd5-3a94909757ef.png)
+
 ## Machine learning
+### Logistic Regression
+[a relative link](/notebooks/Parkinson_Logistic_Regression.ipynb)
+Train size: 70%
+Test size: 30%
+
+Metric			   |    Results
+:-------------------------:|:-------------------------:
+Accuracy		   |	0.6528
+Precision		   |	0.6259
+Recall			   |	0.8368
+
+![image](https://user-images.githubusercontent.com/19128178/144709854-0fcef0cf-5a46-49a7-86af-b74595d5da61.png)
+![image](https://user-images.githubusercontent.com/19128178/144709861-dc8535c2-0781-4215-b4d8-592156e5416d.png)
+
+### Polynomial Regression
+Train size: 75%
+Test size: 25%
+
+Degree			   |    Results
+:-------------------------:|:-------------------------:
+First			   |Training: MSE =0.20226664986073595<br>Test: MSE =0.22372550107151745
+Second			   |Training: MSE =0.09041958178788939<br>Test: MSE =0.9440424366774228
+Third			   |Training: MSE =2.4091509149795675e-20<br>Test: MSE =10807.336241830348
+Fourth			   |Training: MSE =1.312378446659635e-19<br>Test: MSE =161200.20848268343
+Fifth			   |Training: MSE =2.9573820705183283e-19<br>Test: MSE =1549021.0980967553
+
+En base a lo visto con los resultados de la regresion polinomial pudimos observar que al incrementar el grado del polinomio reducirá el Mean square error en el entrenamiento pero incrementará en las pruebas, esto es debido a que se genera el llamado overfitting.
+
+### SVM
+SVM Characteristics	   |    Results
+:-------------------------:|:-------------------------:
+rbf, c=10, gamma=0.0001|Accuracy:0.707988<br>Precision:0.7233<br>Recall:0.7525
+![image](https://user-images.githubusercontent.com/19128178/144710304-c1f0447e-4be7-4948-a8c5-f85cae598915.png)|![image](https://user-images.githubusercontent.com/19128178/144710312-3d902873-4849-490a-aeed-aacc78388386.png)
+
 ## 🏁 Conclusión
 
 ### 💬 Q&A
