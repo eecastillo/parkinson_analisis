@@ -167,7 +167,8 @@ Class information	   | int
 
 ## Machine learning
 ### Logistic Regression
-[a relative link](/notebooks/Parkinson_Logistic_Regression.ipynb)
+[Parkinson_Logistic_Regression.ipynb](/notebooks/Parkinson_Logistic_Regression.ipynb)
+
 Train size: 70%
 Test size: 30%
 
@@ -195,12 +196,31 @@ Fifth			   |Training: MSE =2.9573820705183283e-19<br>Test: MSE =1549021.09809675
 En base a lo visto con los resultados de la regresion polinomial pudimos observar que al incrementar el grado del polinomio reducirá el Mean square error en el entrenamiento pero incrementará en las pruebas, esto es debido a que se genera el llamado overfitting.
 
 ### SVM
+Train size: 75%
+Test size: 25%
+
 SVM Characteristics	   |    Results
 :-------------------------:|:-------------------------:
 rbf, c=10, gamma=0.0001|Accuracy:0.707988<br>Precision:0.7233<br>Recall:0.7525
 ![image](https://user-images.githubusercontent.com/19128178/144710304-c1f0447e-4be7-4948-a8c5-f85cae598915.png)|![image](https://user-images.githubusercontent.com/19128178/144710312-3d902873-4849-490a-aeed-aacc78388386.png)
+rbf, c=1, gamma=0.0001|Accuracy: 0.65564<br>Precision: 0.66079<br>Recall: 0.7575
+![image](https://user-images.githubusercontent.com/19128178/144710755-9c575015-b087-4b81-b26f-afd059ee60ac.png)|![image](https://user-images.githubusercontent.com/19128178/144710758-8aca8f6c-ac76-4320-8796-261228fdeefe.png)
+rbf, c=100, gamma=0.0001|Accuracy: 0.6969<br>Precision: 0.72680<br>Recall: 0.71212
+![image](https://user-images.githubusercontent.com/19128178/144710794-d85b1a4f-2de9-4900-8e43-dce28b5042e8.png)|![image](https://user-images.githubusercontent.com/19128178/144710796-4f138763-0e1c-4829-9085-34605de0e96f.png)
+rbf, c=1000, gamma=0.0001|Accuracy: 0.63911<br>Precision: 0.6666<br>Recall: 0.67676
+![image](https://user-images.githubusercontent.com/19128178/144710824-e20d960e-edd0-4a73-adc4-a6642efc45fd.png)|![image](https://user-images.githubusercontent.com/19128178/144710828-d8d9168a-cfaa-43b3-9eeb-59661bb4143c.png)
+rbf, c=10, gamma=0.001|Accuracy: 0.67217<br>Precision: 0.718232<br>Recall: 0.65656
+![image](https://user-images.githubusercontent.com/19128178/144710885-1f3a6574-1df8-478c-ab1a-515785871122.png)|![image](https://user-images.githubusercontent.com/19128178/144710887-15bc4e9d-648b-4e90-b283-758fab1086ee.png)
+rbf, c=1, gamma=0.001|Accuracy: 0.658402<br>Precision: 0.70786<br>Recall: 0.63636
+![image](https://user-images.githubusercontent.com/19128178/144710919-73323c4e-d5aa-485c-bf01-7cab67330960.png)|![image](https://user-images.githubusercontent.com/19128178/144710926-e60fb5c1-4859-44ba-833b-d99ba5af1b46.png)
+rbf, c=100, gamma=0.001|Accuracy: 0.658402<br>Precision: 0.70108<br>Recall: 0.651515
+![image](https://user-images.githubusercontent.com/19128178/144710963-b26ff965-8949-42c5-bf87-d094757c6ea6.png)|![image](https://user-images.githubusercontent.com/19128178/144710969-8d436716-f0ee-4bb7-a45a-0cf7c429f452.png)
+rbf, c=1000, gamma=0.001|Accuracy: 0.65840<br>Precision: 0.701086<br>Recall: 0.651515
+![image](https://user-images.githubusercontent.com/19128178/144711013-e672c920-fdae-4361-b8a9-5eb36eec2bde.png)|![image](https://user-images.githubusercontent.com/19128178/144711020-dcbd7936-ba18-4d34-9ffb-8a247b0d2233.png)
+
 
 ## 🏁 Conclusión
+En base a los datos de las metricas obtenidas en base al uso de los tres tipos de modelos se observó que el modelo con los mejores resultados fué el de SVM con kernel rbf, c = 10 y gamma = 0.0001
 
 ### 💬 Q&A
 ▶ **`Preguntas y respuestas`**
