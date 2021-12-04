@@ -149,14 +149,30 @@ Análisis de pulso <br>
    ...🐱‍👤
   </details>
   </ul>
-  
 ### 📈 Anáslisis de Datos
+columna 1: Subject id, entero
 
-## 🏁 Conclusión
+columna 2-27: features
+elementos 1-5: Jitter (local),Jitter (local, absolute),Jitter (rap),Jitter (ppq5),Jitter (ddp), flotantes
+elementos 6-11: Shimmer (local),Shimmer (local, dB),Shimmer (apq3),Shimmer (apq5), Shimmer (apq11),Shimmer (dda), flotantes
+elementos 12-14: AC,NTH,HTN, flotantes
+elementos 15-19: Median pitch,Mean pitch,Standard deviation,Minimum pitch,Maximum pitch, flotantes
+elementos 20-23: Number of pulses,Number of periods,Mean period,Standard deviation of period, flotantes
+elementos 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degree of voice breaks flotantes
+
+column 28: class information entero
+
+### Desarrollo con R y Shiny
+
 
 ### 🖥 Demo Shiny  
   https://r6x320-fernando0maldonado.shinyapps.io/James_Parkinson/
   
+## Procesamiento de datos con Python
+## Analisis de datos con Python
+## Machine learning
+## 🏁 Conclusión
+
 ### 💬 Q&A
 ▶ **`Preguntas y respuestas`**
   <ul>
