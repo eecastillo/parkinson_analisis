@@ -177,9 +177,7 @@ Metric			   |    Results
 Accuracy		   |	0.6528
 Precision		   |	0.6259
 Recall			   |	0.8368
-
-![image](https://user-images.githubusercontent.com/19128178/144709854-0fcef0cf-5a46-49a7-86af-b74595d5da61.png)
-![image](https://user-images.githubusercontent.com/19128178/144709861-dc8535c2-0781-4215-b4d8-592156e5416d.png)
+![image](https://user-images.githubusercontent.com/19128178/144709854-0fcef0cf-5a46-49a7-86af-b74595d5da61.png)|![image](https://user-images.githubusercontent.com/19128178/144709861-dc8535c2-0781-4215-b4d8-592156e5416d.png)
 
 ### Polynomial Regression
 [Parkinson_regresion_polinomial.ipynb](/notebooks/Parkinson_regresion_polinomial.ipynb)
