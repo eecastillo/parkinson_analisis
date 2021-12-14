@@ -252,21 +252,14 @@ En base a los datos de las metricas obtenidas en base al uso de los tres tipos d
 - [Machine learning for the diagnosis of Parkinson’s
 disease](https://arxiv.org/ftp/arxiv/papers/2010/2010.06101.pdf "E-Book PDF")
 - [Videos todo sobre el Parkinson](http://ustedyparkinson.com/es-pk/view/m101-a01-entendiendo-la-enfermedad-de-parkinson-animaci%c3%b3n "UstedyParkinson")
-tags$a(href="https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/", 
-                            "https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/"),hr(),
-                     tags$a(href="https://arxiv.org/pdf/2010.06101.pdf", 
-                            "https://arxiv.org/pdf/2010.06101.pdf"),hr(),
-                     tags$a(href="https://www.larescvalenciana.org/abc-del-parkinson/", 
-                            "https://www.larescvalenciana.org/abc-del-parkinson/"),hr(),
-                     tags$a(href="https://medlineplus.gov/spanish/parkinsonsdisease.html", 
-                            "https://medlineplus.gov/spanish/parkinsonsdisease.html"),hr(),
-                     tags$a(href="https://conoceelparkinson.org/sintomas/confinamiento-sintomas-enfermedad-parkinson/",
-                            "https://conoceelparkinson.org/sintomas/confinamiento-sintomas-enfermedad-parkinson/"),hr(),
-                     tags$a(href="https://conoceelparkinson.org/cuidados/dia-mundial-parkinson-2021/",
-                            "https://conoceelparkinson.org/cuidados/dia-mundial-parkinson-2021/"),hr(),
-                     tags$a(href="https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-enfermedad-parkinsonproyecciones-futuras-diagnostico-precoz-X0716864008322080",
-                            "https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-enfermedad-parkinsonproyecciones-futuras-diagnostico-precoz-X0716864008322080"),hr()
-			    
+- [Conoce más de EP](https://www.esparkinson.es/espacio-parkinson/conocer-la-enfermedad/ "Conoce más de EP")
+- [ABC Parkinson](https://www.larescvalenciana.org/abc-del-parkinson/ "ABC Parkinson")
+- [Mal del Parkinson](https://medlineplus.gov/spanish/parkinsonsdisease.html "Mal del Parkinson")
+- [Síntomas Parkinson](https://conoceelparkinson.org/sintomas/confinamiento-sintomas-enfermedad-parkinson/ "Síntomas Parkinson")
+- [Día Mundial del Párkinson](https://conoceelparkinson.org/cuidados/dia-mundial-parkinson-2021/ "Día Mundial del Párkinson")
+- [EP: proyecciones futuras, diagnóstico...](https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-enfermedad-parkinsonproyecciones-futuras-diagnostico-precoz-X0716864008322080 "Enfermedad de parkinson,proyecciones futuras, diagnóstico precoz, tratamiento temprano")
+
+               
 			    
 ---
 con ❤ **[eecastillo](https://github.com/eecastillo)** & **[@ferjml97](https://github.com/ferjml97)** 🙂
